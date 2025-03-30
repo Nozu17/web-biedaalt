@@ -3,71 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Арьс арчилгаа</title>
+    <title>Beute God</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+    <!-- Header хэсэг (Navigation) -->
     <header>
-        <div class="logo">🌿</div>
+        <div class="top-bar">
+            Урчлээний эсрэг эсвэл нүхжилтийн эсрэг багц + зөвхөн тос худалдаж авбал 🎁 Төгс хамгаалалт НАРНЫ ТОС БЭЛЭГЛЭНЭ!  
+        </div>
         <nav>
-            <ul>
-                <li><a href="#">Бүгд</a></li>
-                <li><a href="#">Багц</a></li>
-                <li><a href="#">Арьс арчилгаа</a></li>
-                <li><a href="#">Нүүр будалт</a></li>
-                <li><a href="#">Хямдрал</a></li>
+            <img src="./nemelt/logo.png" class="logo" alt="img">
+            <ul class="menu">
+                <li><a href="./pages/bugd/index.html">Бүгд</a></li>
+                <li><a href="./pages/bagts/index.html">Багц</a></li>
+                <li><a href="./pages/aris/index.html">Арьс арчилгаа</a></li>
+                <li><a href="./pages/nuur budag/index.html">Нүүр будалт</a></li>
+                <li><a href="./pages/hymdral/index.html">Хямдрал</a></li>
             </ul>
+            <div class="nav-icons">
+                <a href="#" id="search-toggle">🔍</a>
+                <a href="#">🛒</a>
+                <a href="#">👤</a>
+            </div>
         </nav>
-        <div class="icons">
-            <span>🔍</span>
-            <span>🛒</span>
-            <span>👤</span>
+        <div class="search-bar-container" id="search-bar" style="display: none;">
+            <input type="text" placeholder="Бүтээгдэхүүн хайх...">
+            <button type="button" id="search-close">X</button>
         </div>
     </header>
 
-    <div class="container">
-        <aside>
-            <h3>Ангилал</h3>
-            <ul>
-                <li><a href="#">Бүх бүтээгдэхүүн</a></li>
-                <li><a href="#">Багц</a></li>
-                <li>Арьс арчилгаа
-                    <ul>
-                        <li><a href="#">Маск</a></li>
-                        <li><a href="#">Хамгаалах</a></li>
-                        <li><a href="#">Нөсөө толбо</a></li>
-                        <li><a href="#">Нүхжилт</a></li>
-                        <li><a href="#">Үрчлээ</a></li>
-                    </ul>
-                </li>
-                <li><a href="#">Нүүр будалт</a></li>
-            </ul>
-        </aside>
+    <!-- Banner хэсэг -->
+    <section class="banner">
+        <div class="text">
+            <h2>МОНГОЛЫН АНХНЫ</h2>
+            <h1>CUSHION</h1>
+            <p>Хөнгөн • Өөгүй бүрхэлт • Чийгшүүлэгчтэй • UV хамгаалалт</p>
+        </div>
+        <div class="image">
+            <img src="image.png" alt="Cushion бүтээгдэхүүн">
+        </div>
+    </section>
 
-        <main>
-            <h2>Бүтээгдэхүүн</h2>
-            <div class="products">
-                <div class="product">
-                    <img src="cream.jpg" alt="Цайруулах тос">
-                    <h3>Цайруулах тос</h3>
-                    <p>39,000₮</p>
-                </div>
-                <div class="product">
-                    <img src="serum.jpg" alt="Цайруулах серум">
-                    <h3>Цайруулах серум</h3>
-                    <p>39,000₮</p>
-                </div>
-                <div class="product">
-                    <img src="pore_cream.jpg" alt="Нүхжилтийн эсрэг тос">
-                    <h3>Нүхжилтийн эсрэг тос</h3>
-                    <p>39,000₮</p>
-                </div>
+     <!-- Footer хэсэг -->
+     <footer>
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h3>Beute God</h3>
+                <p>"Beute God" брэнд нь 2021 онд Монгол хүний арьсны онцлогт тохирсон ариун цэврийн бүтээгдэхүүнээ гаргаж, үйл ажиллагаагаа албан ёсоор эхлүүлсэн. Бид гоо сайхны бүтээгдэхүүний үйлдвэрлэлд дэлхийд хүлээн зөвшөөрөгдсэн ISO227/6:2007 болон GMP стандартыг хангасан Монгол брэнд билээ.</p>
             </div>
-        </main>
-    </div>
-
-    <footer>
-        <p>© 2025 Бүх эрх хуулиар хамгаалагдсан.</p>
+            <div class="footer-section links">
+                <h3>Туслах цэс</h3>
+                <ul>
+                    <li><a href="#">Бидний тухай</a></li>
+                    <li><a href="#">Холбоо барих</a></li>
+                    <li><a href="#">Түгээмэл асуулт</a></li>
+                    <li><a href="#">Нийтлэлүүд</a></li>
+                </ul>
+            </div>
+            <div class="footer-section products">
+                <h3>Бүтээгдэхүүн</h3>
+                <ul>
+                    <li><a href="#">Бүх бүтээгдэхүүн</a></li>
+                    <li><a href="#">Онцлох бүтээгдэхүүн</a></li>
+                    <li><a href="#">Бестселлер</a></li>
+                    <li><a href="#">Хямдарсан бүтээгдэхүүн</a></li>
+                </ul>
+            </div>
+            <div class="footer-section contact">
+                <h3>Холбоо барих</h3>
+                <ul>
+                    <li>📞 77328888</li>
+                    <li>📧 eeehold@gmail.com</li>
+                    <li>📍 Улаанбаатар хот, ХУД, 3-р хороо, Сүмбэр товч 15 давхарт 1506 тоот.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 Онлайн худалдааны хөгжүүлэгч <strong>Z9CHIL</strong> платформ.</p>
+        </div>
     </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const searchToggle = document.getElementById('search-toggle');
+            const searchBar = document.getElementById('search-bar');
+            const searchClose = document.getElementById('search-close');
+
+            searchToggle.addEventListener('click', function(e) {
+                e.preventDefault();
+                searchBar.style.display = 'flex';
+            });
+
+            searchClose.addEventListener('click', function() {
+                searchBar.style.display = 'none';
+            });
+        });
+    </script>
 </body>
 </html>

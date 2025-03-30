@@ -13,37 +13,6 @@ body {
     font-size: 14px;
 }
 
-/* Search Bar */
-.search-bar-container {
-    display: flex;
-    align-items: center;
-    padding: 10px 50px; /* Adjust padding as needed */
-    background-color: #f9f9f9; /* Light background color */
-    border-bottom: 1px solid #ddd;
-}
-
-.search-bar-container input[type="text"] {
-    flex-grow: 1;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    margin-right: 10px;
-}
-
-.search-bar-container button {
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-    color: #888;
-}
-
-/* Initially hide the search bar */
-#search-bar {
-    display: none;
-}
-
-
 /* Навигацийн самбар */
 nav {
     display: flex;
@@ -82,39 +51,6 @@ nav {
     font-size: 20px;
 }
 
-/* Banner хэсэг */
-.banner {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #a32014;
-    color: white;
-    padding: 50px;
-}
-
-.banner .text {
-    flex: 1;
-    max-width: 50%;
-}
-
-.banner h1 {
-    font-size: 50px;
-    font-weight: bold;
-}
-
-.banner h2 {
-    font-size: 30px;
-}
-
-.banner p {
-    font-size: 18px;
-}
-
-.banner .image img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-}
 
 /* Footer хэсэг */
 footer {
@@ -173,9 +109,6 @@ footer {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .search-bar-container {
-        padding: 10px 20px;
-    }
     nav {
         flex-direction: column;
         align-items: flex-start;
@@ -208,3 +141,4 @@ footer {
         text-align: center;
     }
 }
+
