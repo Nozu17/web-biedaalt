@@ -50,53 +50,8 @@ nav {
     text-decoration: none;
     font-size: 20px;
 }
-/*holboo barih */
-.faq-contact {
-    display: flex;
-    justify-content: center;
-    padding: 60px 20px;
-    background-color: #f9f9f9;
-  }
 
-  .contact-card {
-    background-color: #fff;
-    border-radius: 16px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-    padding: 40px 30px;
-    max-width: 500px;
-    width: 100%;
-    text-align: center;
-  }
 
-  .contact-card h2 {
-    font-size: 26px;
-    margin-bottom: 25px;
-    color: #111;
-  }
-
-  .contact-info p {
-    margin: 16px 0;
-    font-size: 16px;
-    color: #333;
-  }
-
-  .contact-info a {
-    color: #007BFF;
-    text-decoration: none;
-    font-weight: 500;
-    transition: 0.3s;
-  }
-
-  .contact-info a:hover {
-    color: #0056b3;
-    text-decoration: underline;
-  }
-
-  hr {
-    border: none;
-    border-top: 1px solid #ddd;
-    margin: 20px 0;
-  }
 /* Footer хэсэг */
 footer {
     background-color: #333;
@@ -186,14 +141,4 @@ footer {
         text-align: center;
     }
 }
-a:link {
-    color: black;
-}
 
-a:vlink {
-    color: black;
-}
-
-a:active {
-    color: black;
-}
