@@ -82,6 +82,66 @@ nav {
     font-size: 20px;
 }
 
+
+
+/* Асуулт */
+.justified {
+    text-align: justify;
+}
+
+.faq-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* эсвэл center */
+    min-height: 100vh;
+    padding: 40px 20px;
+}
+
+.faq {
+    max-width: 700px;
+    width: 100%;
+    background: white;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.faq h2 {
+    text-align: center;
+    margin-bottom: 24px;
+    font-size: 24px;
+}
+
+.faq-item {
+    border-bottom: 1px solid #ddd;
+    padding: 12px 0;
+}
+
+.faq-btn {
+    background: none;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq-content {
+    display: none;
+    margin-top: 8px;
+    color: #444;
+    font-size: 15px;
+}
+
+.faq-item.active .faq-content {
+    display: block;
+}
+
+
 /* Banner хэсэг */
 .banner {
     display: flex;
@@ -208,4 +268,3 @@ footer {
         text-align: center;
     }
 }
-

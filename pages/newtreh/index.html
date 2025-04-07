@@ -34,7 +34,29 @@
         </div>
     </header>
 
-
+    <div id="auth-modal" class="auth-modal" style="display: none;">
+        <div class="auth-content">
+            <span class="close-btn" onclick="closeModal()">✖</span>
+            <h2>Нэвтрэх</h2>
+            <form>
+                <input type="email" placeholder="Имэйл" required>
+                <input type="password" placeholder="Нууц үг" required>
+                <button type="submit">Нэвтрэх</button>
+            </form>
+            <p>Шинэ хэрэглэгч үү? <a href="#" onclick="toggleSignup()">Бүртгүүлэх</a></p>
+        </div>
+        <div class="auth-content" id="signup-form" style="display: none;">
+            <span class="close-btn" onclick="closeModal()">✖</span>
+            <h2>Бүртгүүлэх</h2>
+            <form>
+                <input type="text" placeholder="Нэр" required>
+                <input type="email" placeholder="Имэйл" required>
+                <input type="password" placeholder="Нууц үг" required>
+                <button type="submit">Бүртгүүлэх</button>
+            </form>
+            <p>Бүртгэлтэй хэрэглэгч үү? <a href="#" onclick="toggleLogin()">Нэвтрэх</a></p>
+        </div>
+    </div>
 
 
 
