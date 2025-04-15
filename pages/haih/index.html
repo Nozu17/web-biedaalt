@@ -1,5 +1,3 @@
-<<<<<<< Updated upstream
-=======
 <!DOCTYPE html>
 <html lang="mn">
 
@@ -32,8 +30,9 @@
                 <a href="#">👤</a>
             </div>
         </nav>
-        <div class="search-bar-container" id="search-bar">
-            <input type="text" placeholder="Бүтээгдэхүүн хайх...">
+        <div class="search-bar-container" id="search-bar" align="center">
+            <input type="text" placeholder="Бүтээгдэхүүн хайх..." id="searchInput">
+            <button onclick="resetSearch()">✖</button>
         </div>
     </header>
 
@@ -50,7 +49,21 @@
             </div>
         </aside>
 
-        <main class="products">
+        <section class="product-listing">
+            <div class="product-header">
+                <h2>Бүтээгдэхүүн</h2>
+                <select>
+                    <option>Шинэ нь эхэндээ</option>
+                    <option>Хуучин нь эхэндээ</option>
+                    <option>A - Z</option>
+                    <option>Z - A</option>
+                    <option>Үнэ өсөхөөр</option>
+                    <option>Үнэ буурахаар</option>
+                    <option>Хямдарсан үнэ буурахаар</option>
+                    <option>Хямдарсан үнэ өсөхөөр</option>
+                </select>
+            </div>
+        <div class="product-grid">
             <div class="product-card">
                 <img src="../../nemelt/zurag1.jpg" alt="Гүн цэвэрлэгээний багц">
                 <h3>Гүн цэвэрлэгээний багц</h3>
@@ -72,44 +85,22 @@
                 <p>117,000₮</p>
             </div>
             <div class="product-card">
-                <img src="../../nemelt/aris9.jpg" alt="Үрчлээний эсрэг тонер">
-                <h3>Үрчлээний эсрэг тонер</h3>
-                <p>39,000₮</p>
+                <img src="../../nemelt/zurag5.jpg" alt="Үрчлээний эсрэг багц">
+                <h3>Үрчлээний эсрэг багц</h3>
+                <p>172,000₮ </p>
             </div>
             <div class="product-card">
-                <img src="../../nemelt/aris10.jpg" alt="Чийгшүүлэгч тонер">
-                <h3>Чийгшүүлэгч тонер</h3>
-                <p>14,500₮</p>
+                <img src="../../nemelt/zurag6.jpg" alt="Чийгшүүлэх бэлгийн багц">
+                <h3>Чийгшүүлэх бэлгийн багц</h3>
+                <p>33,500₮ </p>
             </div>
             <div class="product-card">
-                <img src="../../nemelt/aris11.jpg" alt="Мист">
-                <h3>Мист</h3>
-                <p>19,000₮</p>
+                <img src="../../nemelt/zurag7.jpg" alt="Гүн цэвэрлэх бэлгийн багц">
+                <h3>Гүн цэвэрлэх бэлгийн багц</h3>
+                <p>34,600₮ </p>
             </div>
-            <div class="product-card">
-                <img src="../../nemelt/aris12.jpg" alt="pH гүн цэвэрлэгч хөөс">
-                <h3>pH гүн цэвэрлэгч хөөс</h3>
-                <p>14,800₮</p>
             </div>
-        
-            <div class="product-card">
-                <img src="../../nemelt/aris13.jpg" alt="pH Мицеллар нүүр цэвэрлэгч">
-                <h3>pH Мицеллар нүүр цэвэрлэгч</h3>
-                <p>19,800₮</p>
-            </div>
-            <div class="product-card">
-                <img src="../../nemelt/aris14.jpg" alt="Төгс хамгаалалт нарны тос">
-                <h3>Төгс хамгаалалт нарны тос</h3>
-                <p>33,000₮</p>
-            </div>
-        
-            <div class="product-card">
-                <img src="../../nemelt/aris15.jpg" alt="Коллагентай унтлагын маск">
-                <h3>Коллагентай унтлагын маск</h3>
-                <p>24,000₮</p>
-            </div>
-                </div>
-        </main>
+        </section>
     </div>
 
     <footer>
@@ -150,23 +141,13 @@
             <p>© 2025 Онлайн худалдаа - <strong>Z9CHIL</strong></p>
         </div>
     </footer>
-
     <script>
-        // Search toggle logic
-        const searchToggle = document.getElementById("search-toggle");
-        const searchBar = document.getElementById("search-bar");
-        const searchClose = document.getElementById("search-close");
-
-        searchToggle.addEventListener("click", () => {
-            searchBar.style.display = "flex";
-        });
-
-        searchClose.addEventListener("click", () => {
-            searchBar.style.display = "none";
-        });
+        function resetSearch() {
+            document.getElementById("searchInput").value = "";
+            document.getElementById("searchInput").focus();
+        }
     </script>
-
+    
 </body>
 
 </html>
->>>>>>> Stashed changes

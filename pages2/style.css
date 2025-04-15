@@ -382,4 +382,48 @@ footer {
     color: #fff;
     border: none;
   }
+  .colors {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+  }
   
+  .color {
+    padding: 8px 14px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    cursor: pointer;
+    background-color: #f0f0f0;
+    font-size: 14px;
+    transition: all 0.2s ease;
+  }
+  
+  .color:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .color.active {
+    background-color: #000;
+    color: #fff;
+    border-color: #000;
+  }
+  
+.qty-controls {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.qty-controls button {
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    background: #eee;
+    cursor: pointer;
+}
+
+.qty-controls input {
+    width: 30px;
+    text-align: center;
+    border: none;
+    background: transparent;
+}

@@ -52,23 +52,21 @@
             Арьсыг нарны UVA болон UVB туяанаас хамгаалж, маш сайн усны хамгаалалттай, удаан тогтцотой шингэний тусламжтайгаар өгч, жигд, будалт хийгээгүй мэт, байгальд ээлтэй гоо үзэсгэлэн бүрдүүлдэг. Өндөр өө даралттай учраас оройн гоёлын будалтад илүү тохирно.
           </p>
       
-          <div class="options">
-            <p>Өнгө:</p>
-            <div class="colors">
-              <span class="color active">M21</span>
-              <span class="color">B21</span>
-              <span class="color">B23</span>
-            </div>
+          <div class="colors">
+            <span class="color">M21</span>
+            <span class="color">B21</span>
+            <span class="color">B23</span>
           </div>
+          
       
-          <div class="quantity">
-            <button>-</button>
-            <span>1</span>
-            <button>+</button>
-          </div>
+        <div class="qty-controls">
+            <button class="qty-minus">-</button>
+            <input type="text" value="1" readonly />
+            <button class="qty-plus">+</button>
+        </div>
       
           <div class="buttons">
-            <button class="cart">🛒 Сагслах</button>
+            <button class="cart">🛒Сагслах</button>
             <button class="order">ЗАХИАЛАХ</button>
           </div>
         </div>
@@ -114,7 +112,26 @@
         <p>© 2025 Онлайн худалдааны хөгжүүлэгч <strong>Z9CHIL</strong> платформ.</p>
     </div>
 </footer>
+<script>
+    // Элементийг олоход туслах хувьсагчид
+const minusBtn = document.querySelector('.qty-minus');
+const plusBtn = document.querySelector('.qty-plus');
+const qtyInput = document.querySelector('.qty-controls input');
 
+// Нэмэх товчлуурын үйлдэл
+plusBtn.addEventListener('click', () => {
+    let currentValue = parseInt(qtyInput.value);
+    qtyInput.value = currentValue + 1;
+});
+
+// Хасах товчлуурын үйлдэл
+minusBtn.addEventListener('click', () => {
+    let currentValue = parseInt(qtyInput.value);
+    if (currentValue > 1) { // Хамгийн багадаа 1 байхаар хязгаар тавих
+        qtyInput.value = currentValue - 1;
+    }
+});
+</script>
 </body>
 </html>
 
