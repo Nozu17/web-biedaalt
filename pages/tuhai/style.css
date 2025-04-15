@@ -1,11 +1,25 @@
 /* Фонт тохируулах */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
+    line-height: 1.6;
+    background-color: #fff;
+    color: #222;
 }
 
 /* Дээд хэсэг */
+h1 {
+    text-align: center;
+    font-size: 42px;
+    font-weight: 700;
+    margin-top: 40px;
+    margin-bottom: 24px;
+}
+
+
 .top-bar {
     background-color: #f5f5f5;
     text-align: center;
@@ -24,7 +38,7 @@ nav {
 }
 
 .logo {
-    height: 40px; /* Adjust the height as needed */
+    height: 40px;
     width: auto;
 }
 
@@ -33,6 +47,7 @@ nav {
     display: flex;
     gap: 20px;
     padding: 0;
+    margin: 0;
 }
 
 .menu li {
@@ -42,7 +57,7 @@ nav {
 .menu li a {
     text-decoration: none;
     color: black;
-    font-weight: bold;
+    font-weight: 600;
 }
 
 .nav-icons a {
@@ -51,6 +66,30 @@ nav {
     font-size: 20px;
 }
 
+/* Контент төвд, тэгш (justify) */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 48px 16px;
+}
+
+.prose {
+    text-align: justify;
+    line-height: 1.8;
+    word-spacing: 0.05em;
+}
+
+.prose p {
+    margin-bottom: 16px;
+}
+
+.prose blockquote {
+    font-style: italic;
+    color: #666;
+    margin: 20px 0;
+    border-left: 4px solid #ccc;
+    padding-left: 15px;
+}
 
 /* Footer хэсэг */
 footer {
@@ -121,24 +160,14 @@ footer {
         margin-top: 10px;
     }
 
-    .banner {
-        flex-direction: column;
-        text-align: center;
-        padding: 30px 20px;
-    }
-
-    .banner .text {
-        max-width: 100%;
-    }
-
-    .banner .image img {
-        margin-top: 20px;
-    }
-
     .footer-content {
         flex-direction: column;
         align-items: center;
         text-align: center;
     }
-}
 
+    .container {
+        max-width: 90%;
+        padding: 32px 16px;
+    }
+}
