@@ -126,41 +126,6 @@
         </div>
     </footer>
 
-<script>
-    // Search bar toggle
-    document.addEventListener('DOMContentLoaded', function() {
-        const searchToggle = document.getElementById('search-toggle');
-        const searchBar = document.getElementById('search-bar');
-        const searchClose = document.getElementById('search-close');
-
-        if (searchToggle && searchBar && searchClose) {
-            searchToggle.addEventListener('click', function(e) {
-                e.preventDefault();
-                searchBar.style.display = 'flex';
-            });
-
-            searchClose.addEventListener('click', function() {
-                searchBar.style.display = 'none';
-            });
-        } else {
-            console.error('Search elements not found!');
-        }
-    });
-
-    // Profile toggle (одоохондоо идэвхгүй, учир нь холбогдох overlay, close элемент байхгүй)
-    document.addEventListener('DOMContentLoaded', function () {
-        const profileToggle = document.getElementById('profile-toggle');
-        // const overlay = document.getElementById('overlay'); // HTML-д байхгүй
-        // const closeLogin = document.getElementById('close-login'); // HTML-д байхгүй
-
-        if (profileToggle) {
-             console.warn('Profile toggle found, but associated login/overlay elements might be missing.');
-             // profileToggle.addEventListener('click', () => { alert('Profile icon clicked!'); });
-        } else {
-             console.error('Profile toggle element not found!');
-        }
-    });
-</script>
 
 </body>
 </html>
