@@ -16,7 +16,7 @@
         <nav>
             <img src="../../nemelt/logo.png" class="logo" alt="img">
             <ul class="menu">
-                <li><a href="../bugd/index.html">Бүгд</a></li>
+                <li><a href="../pages/bugd/index.html">Бүгд</a></li>
                 <li><a href="../bagts/index.html">Багц</a></li>
                 <li><a href="../aris/index.html">Арьс арчилгаа</a></li>
                 <li><a href="../nuur budag/index.html">Нүүр будалт</a></li>
@@ -34,67 +34,44 @@
         </div>
     </header>
 
-
-       <main>
-        <aside class="sidebar">
-            <div class="category">
-                <h3>Ангилал</h3>
-                <ul>
-                    <li><a href="../bugd/index.html">Бүх бүтээгдэхүүн</a></li>
-                    <li><a href="../bagts/index.html">Багц</a></li>
-                    <li><a href="../aris/index.html">Арьс арчилгаа</a></li>
-                    <li><a href="../nuur budag/index.html">Нүүр будалт</a></li>
-                </ul>
-            </div>
-        </aside>
-
-        <section class="product-listing">
-            <div class="product-header">
-                <h2>Бүтээгдэхүүн</h2>
-                <select>
-                    <option>Шинэ нь эхэндээ</option>
-                    <option>Хуучин нь эхэндээ</option>
-                    <option>A - Z</option>
-                    <option>Z - A</option>
-                    <option>Үнэ өсөхөөр</option>
-                    <option>Үнэ буурахаар</option>
-                    <option>Хямдарсан үнэ буурахаар</option>
-                    <option>Хямдарсан үнэ өсөхөөр</option>
-                </select>
-            </div>
-            <div class="product-grid">
-                <div class="product-card">
-                    <img src="../../nemelt/makeup1.jpg" alt="Cushion + Refill + Whitening Primer">
-                    <h3>Cushion + Refill + Whitening Primer</h3>
-                    <p>67,100₮ <del>88,000₮<del> </p>
-                </div>
-                <div class="product-card">
-                    <img src="../../nemelt/makeup2.jpg" alt="Cushion + Refill">
-                    <h3>Cushion + Refill</h3>
-                    <p>44,000₮ <del>88,000₮<del></p>
-                </div>
-                <div class="product-card">
-                    <img src="../../nemelt/makeup3.jpg" alt="Longwear Foundation + Gel Primer">
-                    <h3>Longwear Foundation + Gel Primer</h3>
-                    <p>55,000₮ <del>75,000₮<del></p>
-                </div>
-                <div class="product-card">
-                    <img src="../../nemelt/makeup5.jpg" alt="Cushion">
-                    <h3>Cushion</h3>
-                    <p>26,400₮ <del>36,000₮<del></p>
-                </div>
-                <div class="product-card">
-                    <img src="../../nemelt/makeup7.jpg" alt="Foundation">
-                    <h3>Foundation</h3>
-                    <p>39,000₮<del>49,000₮<del> </p>
-                </div>
-                </div>
-        </section>
-    </main>
-
-
-
-
+    <div class="product-detail">
+        <div class="left-column">
+          <img src="../../nemelt/zurag10.jpg" alt="Longwear Foundation + Gel Primer" class="main-image">
+          <div class="thumbnail-row">
+            <img src="../../nemelt/zurag10.jpg" class="thumb">
+            <img src="../../nemelt/zurag10-2.jpg" class="thumb">
+            <img src="../../nemelt/zurag10-3.jpg" class="thumb">
+          </div>
+        </div>
+      
+        <div class="right-column">
+          <h2>Longwear Foundation + Gel Primer</h2>
+          <p class="discount">Хэмнэлт: 20,000₮</p>
+          <p class="price">55,000₮ <del>75,000₮</del></p>
+          <p class="description">
+            Арьсыг нарны UVA болон UVB туяанаас хамгаалж, маш сайн усны хамгаалалттай, удаан тогтцотой шингэний тусламжтайгаар өгч, жигд, будалт хийгээгүй мэт, байгальд ээлтэй гоо үзэсгэлэн бүрдүүлдэг. Өндөр өө даралттай учраас оройн гоёлын будалтад илүү тохирно.
+          </p>
+      
+          <div class="colors">
+            <span class="color">M21</span>
+            <span class="color">B21</span>
+            <span class="color">B23</span>
+          </div>
+          
+      
+        <div class="qty-controls">
+            <button class="qty-minus">-</button>
+            <input type="text" value="1" readonly />
+            <button class="qty-plus">+</button>
+        </div>
+      
+          <div class="buttons">
+            <button class="cart">🛒Сагслах</button>
+            <button class="order">ЗАХИАЛАХ</button>
+          </div>
+        </div>
+      </div>
+      
 
     
  <!-- Footer хэсэг -->
@@ -117,9 +94,9 @@
             <h3>Бүтээгдэхүүн</h3>
             <ul>
                 <li><a href="../bugd/index.html">Бүх бүтээгдэхүүн</a></li>
-                <li>Онцлох бүтээгдэхүүн</li>
-                <li>Бестселлер</a></li>
-                <li>Хямдарсан бүтээгдэхүүн</a></li>
+                <li><a href="#">Онцлох бүтээгдэхүүн</a></li>
+                <li><a href="#">Бестселлер</a></li>
+                <li><a href="../hymdral/index.html">Хямдарсан бүтээгдэхүүн</a></li>
             </ul>
         </div>
         <div class="footer-section contact">
@@ -136,20 +113,24 @@
     </div>
 </footer>
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const searchToggle = document.getElementById('search-toggle');
-        const searchBar = document.getElementById('search-bar');
-        const searchClose = document.getElementById('search-close');
+    // Элементийг олоход туслах хувьсагчид
+const minusBtn = document.querySelector('.qty-minus');
+const plusBtn = document.querySelector('.qty-plus');
+const qtyInput = document.querySelector('.qty-controls input');
 
-        searchToggle.addEventListener('click', function(e) {
-            e.preventDefault();
-            searchBar.style.display = 'flex';
-        });
+// Нэмэх товчлуурын үйлдэл
+plusBtn.addEventListener('click', () => {
+    let currentValue = parseInt(qtyInput.value);
+    qtyInput.value = currentValue + 1;
+});
 
-        searchClose.addEventListener('click', function() {
-            searchBar.style.display = 'none';
-        });
-    });
+// Хасах товчлуурын үйлдэл
+minusBtn.addEventListener('click', () => {
+    let currentValue = parseInt(qtyInput.value);
+    if (currentValue > 1) { // Хамгийн багадаа 1 байхаар хязгаар тавих
+        qtyInput.value = currentValue - 1;
+    }
+});
 </script>
 </body>
 </html>
