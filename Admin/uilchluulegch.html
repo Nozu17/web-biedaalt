@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="mn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Segoe+UI&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f4f6f9;
+            display: flex;
+        }
+
+        .sidebar {
+            width: 240px;
+            background-color: #4CAF50;
+            color: white;
+            height: 100vh;
+            padding: 20px;
+            position: fixed;
+        }
+
+        .sidebar h2 {
+            margin-bottom: 30px;
+            font-size: 20px;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar ul li {
+            margin-bottom: 15px;
+        }
+
+        .sidebar ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            display: block;
+            padding: 8px;
+            border-radius: 6px;
+        }
+
+        .sidebar ul li a:hover {
+            background-color: #43a047;
+        }
+
+        .main-content {
+            margin-left: 240px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        .header {
+            background: white;
+            padding: 20px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header h1 {
+            font-size: 22px;
+        }
+
+        .user {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .user img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .content {
+            padding: 30px;
+            overflow-y: auto;
+            flex: 1;
+        }
+
+        .team-title {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .client-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .client-card {
+            background-color: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+            text-align: center;
+        }
+
+        .client-card img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+
+        .client-card h3 {
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        .client-card span {
+            color: #666;
+            font-size: 14px;
+        }
+
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
+            }
+
+            .main-content {
+                margin-left: 0;
+            }
+
+            .client-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .client-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h2>Admin</h2>
+        <ul>
+            <li><a href="./dashboard.html">Хяналтын самбар</a></li>
+            <li><a href="./index.html">Бүтээгдэхүүн</a></li>
+            <li><a href="./zahialga.html">Захиалгууд</a></li>
+            <li><a href="./uilchluulegch.html">Хэрэглэгчид</a></li>
+            <li><a href="./hudaldaachid.html">Манай баг</a></li>
+            <li><a href="#">Тохиргоо</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Header -->
+        <div class="header">
+            <h1>Хяналтын Самбар</h1>
+            <div class="user">
+                <span>Админ</span>
+                <img src="../nemelt2/admin1.jpg" alt="User"
+                    onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0iIzRDQUY1MCI+PHBhdGggZD0iTTEyIDEyQzE0Ljc2MSAxMiAxNyA5Ljc2MSAxNyA3QzE3IDQuMjM5IDE0Ljc2MSAyIDEyIDJDOS4yMzkgMiA3IDQuMjM5IDcgN0M3IDkuNzYxIDkuMjM5IDEyIDEyIDEyTTEyIDE0QzkuMzQ3IDE0IDMgMTUuMzQ3IDMgMThWMTlDMyAxOS41NTIgMy40NDcgMjAgNCAyMEgyMEMyMC41NTMgMjAgMjEgMTkuNTUyIDIxIDE5VjE4QzIxIDE1LjM0NyAxOC42NTMgMTQgMTYgMTRIMTJaIi8+PC9zdmc+'">
+            </div>
+        </div>
+
+        <!-- Content -->
+        <div class="content">
+            <h2 class="team-title">Манай Хэрэглэгчид</h2>
+
+            <div class="client-grid">
+                <div class="client-card">
+                    <img src="../nemelt2/customer1.jpg" alt="Үйлчлүүлэгч 1"
+                        onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0iIzRDQUY1MCI+PHBhdGggZD0iTTEyIDEyQzE0Ljc2MSAxMiAxNyA5Ljc2MSAxNyA3QzE3IDQuMjM5IDE0Ljc2MSAyIDEyIDJDOS4yMzkgMiA3IDQuMjM5IDcgN0M3IDkuNzYxIDkuMjM5IDEyIDEyIDEyTTEyIDE0QzkuMzQ3IDE0IDMgMTUuMzQ3IDMgMThWMTlDMyAxOS41NTIgMy40NDcgMjAgNCAyMEgyMEMyMC41NTMgMjAgMjEgMTkuNTUyIDIxIDE5VjE4QzIxIDE1LjM0NyAxOC42NTMgMTQgMTYgMTRIMTJaIi8+PC9zdmc+'">
+                    <h3>Тэмүүлэн</h3>
+                    <span>Оюутан</span>
+                </div>
+                <div class="client-card">
+                    <img src="../nemelt2/cus.jpg" alt="Үйлчлүүлэгч 2"
+                        onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0iIzRDQUY1MCI+PHBhdGggZD0iTTEyIDEyQzE0Ljc2MSAxMiAxNyA5Ljc2MSAxNyA3QzE3IDQuMjM5IDE0Ljc2MSAyIDEyIDJDOS4yMzkgMiA3IDQuMjM5IDcgN0M3IDkuNzYxIDkuMjM5IDEyIDEyIDEyTTEyIDE0QzkuMzQ3IDE0IDMgMTUuMzQ3IDMgMThWMTlDMyAxOS41NTIgMy40NDcgMjAgNCAyMEgyMEMyMC41NTMgMjAgMjEgMTkuNTUyIDIxIDE5VjE4QzIxIDE1LjM0NyAxOC42NTMgMTQgMTYgMTRIMTJaIi8+PC9zdmc+'">
+                    <h3>Намуун</h3>
+                    <span>Эмч</span>
+                </div>
+                <div class="client-card">
+                    <img src="../nemelt2/customer3.jpg" alt="Үйлчлүүлэгч 3"
+                        onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0iIzRDQUY1MCI+PHBhdGggZD0iTTEyIDEyQzE0Ljc2MSAxMiAxNyA5Ljc2MSAxNyA3QzE3IDQuMjM5IDE0Ljc2MSAyIDEyIDJDOS4yMzkgMiA3IDQuMjM5IDcgN0M3IDkuNzYxIDkuMjM5IDEyIDEyIDEyTTEyIDE0QzkuMzQ3IDE0IDMgMTUuMzQ3IDMgMThWMTlDMyAxOS41NTIgMy40NDcgMjAgNCAyMEgyMEMyMC41NTMgMjAgMjEgMTkuNTUyIDIxIDE5VjE4QzIxIDE1LjM0NyAxOC42NTMgMTQgMTYgMTRIMTJaIi8+PC9zdmc+'">
+                    <h3>Батдулам</h3>
+                    <span>Инженер</span>
+                </div>
+                <div class="client-card">
+                    <img src="../nemelt2/customer4.jpg" alt="Үйлчлүүлэгч 4"
+                        onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0iIzRDQUY1MCI+PHBhdGggZD0iTTEyIDEyQzE0Ljc2MSAxMiAxNyA5Ljc2MSAxNyA3QzE3IDQuMjM5IDE0Ljc2MSAyIDEyIDJDOS4yMzkgMiA3IDQuMjM5IDcgN0M3IDkuNzYxIDkuMjMkgMTIgMTIgMTJNMTIgMTRDOS4zNDcgMTQgMyAxNS4zNDcgMyAxOFYxOUMzIDE5LjU1MiAzLjQ0NyAyMCA0IDIwSDIwQzIwLjU1MyAyMCAyMSAxOS41NTIgMjEgMTlWMThDMjEgMTUuMzQ3IDE4LjY1MyAxNCAxNiAxNEgxMloiLz48L3N2Zz4='">
+                    <h3>Саранцэцэг</h3>
+                    <span>Багш</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

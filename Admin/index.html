@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="mn">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Манай Үйлчлүүлэгчид</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f4f6f9;
+            display: flex;
+        }
+
+        .sidebar {
+            width: 240px;
+            background-color: #4CAF50;
+            color: white;
+            height: 100vh;
+            padding: 20px;
+            position: fixed;
+        }
+
+        .sidebar h2 {
+            margin-bottom: 30px;
+            font-size: 20px;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar ul li {
+            margin-bottom: 15px;
+        }
+
+        .sidebar ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            display: block;
+            padding: 8px;
+            border-radius: 6px;
+        }
+
+        .sidebar ul li a:hover {
+            background-color: #43a047;
+        }
+
+        .main-content {
+            margin-left: 240px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        .header {
+            background: white;
+            padding: 20px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        .header h1 {
+            font-size: 22px;
+        }
+
+        .content {
+            padding: 30px;
+            overflow-y: auto;
+            flex: 1;
+        }
+
+        .team-title {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #333;
+            font-size: 28px;
+        }
+
+        .client-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 30px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .client-card {
+            background-color: white;
+            padding: 20px;
+            border-radius: 16px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .client-card img {
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-bottom: 15px;
+            border: 3px solid #4CAF50;
+        }
+
+        .client-card h3 {
+            margin: 10px 0 5px;
+            color: #222;
+        }
+
+        .client-card span {
+            font-size: 14px;
+            color: #666;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h2>Admin</h2>
+        <ul>
+            <li><a href="./dashboard.html">Хяналтын самбар</a></li>
+            <li><a href="./addproduct.html">Бүтээгдэхүүн</a></li>
+            <li><a href="./zahialga.html">Захиалгууд</a></li>
+            <li><a href="./uilchluulegch.html">Хэрэглэгчид</a></li>
+            <li><a href="./hudaldaachid.html">Манай баг</a></li>
+            <li><a href="#">Тохиргоо</a></li>
+        </ul>
+    </div>
+
+    <!-- Main content -->
+    <div class="main-content">
+        <div class="header">
+            <h1>Үйлчлүүлэгчид</h1>
+        </div>
+
+        <!-- Add Product Modal -->
+        <!DOCTYPE html>
+        <html lang="mn">
+
+        <head>
+            <meta charset="UTF-8">
+            <title>Нүүр хуудас</title>
+        </head>
+
+        <body>
+            <form onsubmit="goToNextPage(event)">
+                <button type="submit">Бүтээгдэхүүн нэмэх</button>
+            </form>
+
+            <script>
+                function goToNextPage(event) {
+                    event.preventDefault(); // Stops form from refreshing
+                    // You can add validation here
+                    window.location.href = "addproduct.html"; // Redirects to success page
+                }
+            </script>
+        </body>
+
+        </html>
+
+        <script>
+            document.getElementById("productForm").addEventListener("submit", function (event) {
+                event.preventDefault(); // Stop form from refreshing
+
+                // Optional: Validate form data here
+
+                // Redirect to success page
+                window.location.href = "success.html";
+            });
+        </script>
+
+
+
+        <!------------------------------------------>
+        <div class="product-grid">
+            <div class="product-card">
+                <a href="../../pages2/product1/index.html">
+                    <img src="../nemelt/zurag1.jpg" alt="Гүн цэвэрлэгээний багц" class="product-image"
+                        data-hover="../../nemelt/zurag1-2.jpg">
+                    <h3>Гүн цэвэрлэгээний багц</h3>
+                    <p>34,600₮</p>
+                    <div class="admin-actions">
+                        <button class="edit-btn">✏️ Засах</button>
+                        <button class="delete-btn">🗑️ Устгах</button>
+                    </div>
+
+                </a>
+            </div>
+
+            <div class="product-card">
+                <a href="#">
+                    <img src="../nemelt/zurag2.jpg" alt="Чийгшүүлэх багц" class="product-image"
+                        data-hover="../nemelt/zurag2-2.jpg">
+                    <h3>Чийгшүүлэх багц</h3>
+                    <p>33,500₮</p>
+                    <div class="admin-actions">
+                        <button class="edit-btn">✏️ Засах</button>
+                        <button class="delete-btn">🗑️ Устгах</button>
+                    </div>
+
+                </a>
+            </div>
+
+            <div class="product-card">
+                <a href="#">
+                    <img src="../nemelt/zurag3.jpg" alt="Цайруулах багц" class="product-image"
+                        data-hover="../../nemelt/zurag3-2.jpg">
+                    <h3>Цайруулах багц</h3>
+                    <p>78,000₮</p>
+                    <div class="admin-actions">
+                        <button class="edit-btn">✏️ Засах</button>
+                        <button class="delete-btn">🗑️ Устгах</button>
+                    </div>
+
+                </a>
+            </div>
+
+            <div class="product-card">
+                <a href="#">
+                    <img src="../nemelt/zurag4.jpg" alt="Нүхжилтийн эсрэг багц" class="product-image"
+                        data-hover="../../nemelt/zurag4-2.jpg">
+                    <h3>Нүхжилтийн эсрэг багц</h3>
+                    <p>117,000₮</p>
+                    <div class="admin-actions">
+                        <button class="edit-btn">✏️ Засах</button>
+                        <button class="delete-btn">🗑️ Устгах</button>
+                    </div>
+
+                </a>
+            </div>
+
+            <div class="product-card">
+                <a href="#">
+                    <img src="../nemelt/zurag5.jpg" alt="Үрчлээний эсрэг багц" class="product-image"
+                        data-hover="../../nemelt/zurag5-2.jpg">
+                    <h3>Үрчлээний эсрэг багц</h3>
+                    <p>172,000₮</p>
+                    <div class="admin-actions">
+                        <button class="edit-btn">✏️ Засах</button>
+                        <button class="delete-btn">🗑️ Устгах</button>
+                    </div>
+
+                </a>
+            </div>
+
+            <div class="product-card">
+                <a href="#">
+                    <img src="../nemelt/zurag6.jpg" alt="Чийгшүүлэх бэлгийн багц" class="product-image"
+                        data-hover="../../nemelt/zurag6-2.jpg">
+                    <h3>Чийгшүүлэх бэлгийн багц</h3>
+                    <p>33,500₮</p>
+                    <div class="admin-actions">
+                        <button class="edit-btn">✏️ Засах</button>
+                        <button class="delete-btn">🗑️ Устгах</button>
+                    </div>
+
+                </a>
+            </div>
+
+            <div class="product-card">
+                <a href="#">
+                    <img src="../nemelt/zurag7.jpg" alt="Гүн цэвэрлэх бэлгийн багц" class="product-image"
+                        data-hover="../../nemelt/zurag7-2.jpg">
+                    <h3>Гүн цэвэрлэх бэлгийн багц</h3>
+                    <p>34,600₮</p>
+                    <div class="admin-actions">
+                        <button class="edit-btn">✏️ Засах</button>
+                        <button class="delete-btn">🗑️ Устгах</button>
+                    </div>
+
+                </a>
+            </div>
+
+            <div class="product-card">
+                <a href="#">
+                    <img src="../nemelt/zurag8.jpg" alt="Cushion + Refill + Whitening Primer" class="product-image"
+                        data-hover="../../nemelt/zurag8-2.jpg">
+                    <h3>Cushion + Refill + Whitening Primer</h3>
+                    <p>67,100₮ <del>88,000₮</del></p>
+                    <div class="admin-actions">
+                        <button class="edit-btn">✏️ Засах</button>
+                        <button class="delete-btn">🗑️ Устгах</button>
+                    </div>
+
+                </a>
+            </div>
+
+            <div class="product-card">
+                <a href="#">
+                    <img src="../nemelt/zurag9.jpg" alt="Cushion + Refill" class="product-image"
+                        data-hover="../../nemelt/zurag9-2.jpg">
+                    <h3>Cushion + Refill</h3>
+                    <p>44,000₮ <del>55,000₮</del></p>
+                    <div class="admin-actions">
+                        <button class="edit-btn">✏️ Засах</button>
+                        <button class="delete-btn">🗑️ Устгах</button>
+                    </div>
+
+                </a>
+            </div>
+
+            <div class="product-card">
+                <a href="../../pages2/longwear+gel.html">
+                    <img src="../nemelt/zurag10.jpg" alt="Longwear Foundation + Gel Primer" class="product-image"
+                        data-hover="../../nemelt/zurag10-2.jpg">
+                    <h3>Longwear Foundation + Gel Primer</h3>
+                    <p>55,000₮ <del>75,000₮</del></p>
+                    <div class="admin-actions">
+                        <button class="edit-btn">✏️ Засах</button>
+                        <button class="delete-btn">🗑️ Устгах</button>
+                    </div>
+
+                </a>
+            </div>
+
+            <div class="product-card">
+                <a href="#">
+                    <img src="../nemelt/aris10.jpg" alt="Чийгшүүлэх бэлгийн багц" class="product-image"
+                        data-hover="../../nemelt/zurag6-2.jpg">
+                    <h3>Чийгшүүлэх бэлгийн багц</h3>
+                    <p>33,500₮</p>
+                    <div class="admin-actions">
+                        <button class="edit-btn">✏️ Засах</button>
+                        <button class="delete-btn">🗑️ Устгах</button>
+                    </div>
+
+                </a>
+            </div>
+            </section>
+            </main>
+
+            <div class="overlay" id="overlay">
+                <div class="login-sidebar" id="login-sidebar">
+                    <button class="close-btn" id="close-login">✕</button>
+                    <h3>Нэвтрэх</h3>
+                    <input type="email" placeholder="Имэйл" />
+                    <button class="login-btn">Үргэлжлүүлэх</button>
+                    <div class="divider">эсвэл</div>
+                    <button class="fb-login">📘 Facebook-ээр нэвтрэх</button>
+                    <button class="guest-login">👤 Зочноор нэвтрэх</button>
+                    <p class="footer-text">Онлайн худалдааг хөгжүүлэгч <strong>Zochil</strong> платформ.</p>
+                </div>
+            </div>
+
+
+
+
+
+
+            </script>
+</body>
+
+</html>
