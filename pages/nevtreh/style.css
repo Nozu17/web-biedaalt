@@ -294,4 +294,116 @@ a:vlink {
 
 a:active {
     color: black;
-}
+}/* Login form style */
+.login-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 80vh;
+    background-color: #f4f4f4;
+    padding: 40px 20px;
+    align-items: center;
+  }
+  
+  .login-sidebar {
+    background: white;
+    padding: 30px;
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    animation: fadeIn 0.3s ease-in-out;
+    margin: 0 auto;
+  
+    /* Шинээр нэмэх */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  
+  .right-panel img {
+    max-width: 200px;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  
+  .org-name {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .login-btn,
+  .fb-login,
+  .guest-login {
+    margin-top: 15px;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .login-btn {
+    background-color: #4caf50;
+    color: white;
+  }
+  
+  .fb-login {
+    background-color: #3b5998;
+    color: white;
+  }
+  
+  .guest-login {
+    background-color: #ddd;
+  }
+  
+  .divider {
+    margin: 15px 0;
+    text-transform: uppercase;
+    color: #777;
+  }
+  
+  .footer-text {
+    font-size: 12px;
+    color: #999;
+    margin-top: 20px;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+  }
+  
+  @media (max-width: 768px) {
+    .login-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center; /* босоо төв */
+        min-height: 80vh;
+
+    }
+  
+    .left-panel, .right-panel {
+      width: 100%;
+    }
+  
+    .right-panel img {
+      max-width: 150px;
+    }
+  
+    .org-name {
+      font-size: 20px;
+    }
+  }
+  
