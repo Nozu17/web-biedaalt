@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="mn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Захиалгууд - Admin Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Segoe+UI&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/orders.css">
+</head>
+
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <h2>Admin</h2>
+            <button id="mobile-toggle" class="mobile-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+        <ul>
+            <li><a href="./dashboard.html"><span class="icon">📊</span>Хяналтын самбар</a></li>
+            <li><a href="./index.html"><span class="icon">📦</span>Бүтээгдэхүүн</a></li>
+            <li><a href="./zahialga.html" class="active"><span class="icon">🛒</span>Захиалгууд</a></li>
+            <li><a href="./uilchluulegch.html"><span class="icon">👥</span>Хэрэглэгчид</a></li>
+            <li><a href="./hudaldaachid.html"><span class="icon">👨‍💼</span>Манай баг</a></li>
+            <li><a href="./settings.html"><span class="icon">⚙️</span>Тохиргоо</a></li>
+        </ul>
+        <div class="sidebar-footer">
+            <p>© 2025 E-Commerce</p>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Header -->
+        <div class="header">
+            <div class="header-left">
+                <h1>Захиалгууд</h1>
+            </div>
+            <div class="user">
+                <div class="notifications">
+                    <button class="icon-button" id="notifyBtn">🔔</button>
+                    <span class="badge">3</span>
+                    <div class="dropdown-menu" id="notifyDropdown">
+                        <div class="notification-item">
+                            <p>Шинэ захиалга хүлээн авлаа</p>
+                            <small>2 минутын өмнө</small>
+                        </div>
+                        <div class="notification-item">
+                            <p>Бүтээгдэхүүний үлдэгдэл бага байна</p>
+                            <small>1 цагийн өмнө</small>
+                        </div>
+                        <div class="notification-item">
+                            <p>Системийн шинэчлэлт</p>
+                            <small>Өчигдөр</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="user-profile">
+                    <span>Админ</span>
+                    <img src="/project/images/duk.jpg" alt="User" />
+                    <div class="dropdown-menu" id="profileDropdown">
+                        <a href="./settings.html">Тохиргоо</a>
+                        <a href="#">Гарах</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Orders content -->
+        <div class="orders-container">
+            <div class="filters-bar">
+                <div class="search-container">
+                    <input type="text" id="searchOrders" placeholder="Захиалга хайх..." />
+                    <button class="search-button">🔍</button>
+                </div>
+                <div class="filter-controls">
+                    <select id="statusFilter">
+                        <option value="">Бүх төлөв</option>
+                        <option value="completed">Амжилттай</option>
+                        <option value="pending">Хүргэлтэд</option>
+                        <option value="awaiting">Төлбөр хүлээгдэж байна</option>
+                        <option value="cancelled">Цуцлагдсан</option>
+                    </select>
+                    <select id="dateFilter">
+                        <option value="all">Бүх огноо</option>
+                        <option value="today">Өнөөдөр</option>
+                        <option value="yesterday">Өчигдөр</option>
+                        <option value="week">Энэ долоо хоног</option>
+                        <option value="month">Энэ сар</option>
+                    </select>
+                </div>
+                <button id="exportBtn" class="export-button">
+                    <span>📥</span> Экспорт
+                </button>
+            </div>
+
+            <div class="table-container">
+                <table class="data-table orders-table">
+                    <thead>
+                        <tr>
+                            <th>Захиалга ID</th>
+                            <th>Хэрэглэгч</th>
+                            <th>Бүтээгдэхүүний нэр</th>
+                            <th>Үнэ</th>
+                            <th>Огноо</th>
+                            <th>Хаяг</th>
+                            <th>Төлөв</th>
+                            <th>Үйлдлүүд</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>#001234</td>
+                            <td>Болормаа.Б</td>
+                            <td>Cushion + Refill</td>
+                            <td>₮ 250,000</td>
+                            <td>2025-04-13</td>
+                            <td>Улаанбаатар, Баянзүрх</td>
+                            <td>
+                                <select class="status-select pending">
+                                    <option value="pending" selected>Хүргэлтэд</option>
+                                    <option value="awaiting">Төлбөр хүлээгдэж байна</option>
+                                    <option value="completed">Амжилттай</option>
+                                    <option value="cancelled">Цуцлагдсан</option>
+                                </select>
+                            </td>
+                            <td>
+                                <button class="view-button" data-id="001234">Харах</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>#001235</td>
+                            <td>Мөнхсаран.Д</td>
+                            <td>Primer</td>
+                            <td>₮ 50,000</td>
+                            <td>2025-04-12</td>
+                            <td>Эрдэнэт, 3-р хороолол</td>
+                            <td>
+                                <select class="status-select awaiting">
+                                    <option value="pending">Хүргэлтэд</option>
+                                    <option value="awaiting" selected>Төлбөр хүлээгдэж байна</option>
+                                    <option value="completed">Амжилттай</option>
+                                    <option value="cancelled">Цуцлагдсан</option>
+                                </select>
+                            </td>
+                            <td>
+                                <button class="view-button" data-id="001235">Харах</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>#001236</td>
+                            <td>Батбаяр.С</td>
+                            <td>Foundation</td>
+                            <td>₮ 75,000</td>
+                            <td>2025-04-11</td>
+                            <td>Дархан, 6-р баг</td>
+                            <td>
+                                <select class="status-select completed">
+                                    <option value="pending">Хүргэлтэд</option>
+                                    <option value="awaiting">Төлбөр хүлээгдэж байна</option>
+                                    <option value="completed" selected>Амжилттай</option>
+                                    <option value="cancelled">Цуцлагдсан</option>
+                                </select>
+                            </td>
+                            <td>
+                                <button class="view-button" data-id="001236">Харах</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>#001237</td>
+                            <td>Энхжаргал.Г</td>
+                            <td>Lipstick Set</td>
+                            <td>₮ 120,000</td>
+                            <td>2025-04-10</td>
+                            <td>Улаанбаатар, Чингэлтэй</td>
+                            <td>
+                                <select class="status-select completed">
+                                    <option value="pending">Хүргэлтэд</option>
+                                    <option value="awaiting">Төлбөр хүлээгдэж байна</option>
+                                    <option value="completed" selected>Амжилттай</option>
+                                    <option value="cancelled">Цуцлагдсан</option>
+                                </select>
+                            </td>
+                            <td>
+                                <button class="view-button" data-id="001237">Харах</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>#001238</td>
+                            <td>Нямдорж.Ц</td>
+                            <td>Eyeshadow Palette</td>
+                            <td>₮ 180,000</td>
+                            <td>2025-04-09</td>
+                            <td>Улаанбаатар, Хан-Уул</td>
+                            <td>
+                                <select class="status-select cancelled">
+                                    <option value="pending">Хүргэлтэд</option>
+                                    <option value="awaiting">Төлбөр хүлээгдэж байна</option>
+                                    <option value="completed">Амжилттай</option>
+                                    <option value="cancelled" selected>Цуцлагдсан</option>
+                                </select>
+                            </td>
+                            <td>
+                                <button class="view-button" data-id="001238">Харах</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="pagination">
+                <button class="page-button" disabled>&laquo;</button>
+                <button class="page-button active">1</button>
+                <button class="page-button">2</button>
+                <button class="page-button">3</button>
+                <button class="page-button">&raquo;</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Order Detail Modal -->
+    <div id="orderModal" class="modal">
+        <div class="modal-content large-modal">
+            <div class="modal-header">
+                <h2>Захиалгын дэлгэрэнгүй</h2>
+                <button class="close-button">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="order-detail-container">
+                    <div class="order-info-section">
+                        <h3>Үндсэн мэдээлэл</h3>
+                        <div class="order-info-grid">
+                            <div class="info-item">
+                                <span class="info-label">Захиалга ID:</span>
+                                <span class="info-value" id="modalOrderId">#001234</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Захиалсан огноо:</span>
+                                <span class="info-value" id="modalOrderDate">2025-04-13 14:25:30</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Захиалгын төлөв:</span>
+                                <span class="info-value status pending" id="modalOrderStatus">Хүргэлтэд</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Төлбөрийн хэлбэр:</span>
+                                <span class="info-value" id="modalPaymentMethod">Карт</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="order-details-columns">
+                        <div class="customer-info-section">
+                            <h3>Хэрэглэгчийн мэдээлэл</h3>
+                            <div class="customer-info">
+                                <div class="info-item">
+                                    <span class="info-label">Нэр:</span>
+                                    <span class="info-value" id="modalCustomerName">Болормаа.Б</span>
+                                </div>
+                                <div class="info-item">
+                                    <span class="info-label">И-мэйл:</span>
+                                    <span class="info-value" id="modalCustomerEmail">bolormaa@example.com</span>
+                                </div>
+                                <div class="info-item">
+                                    <span class="info-label">Утас:</span>
+                                    <span class="info-value" id="modalCustomerPhone">9911-2233</span>
+                                </div>
+                                <div class="info-item">
+                                    <span class="info-label">Хаяг:</span>
+                                    <span class="info-value" id="modalCustomerAddress">Улаанбаатар, Баянзүрх дүүрэг,
+                                        15-р хороо, 34-р байр, 56 тоот</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="product-info-section">
+                            <h3>Бүтээгдэхүүний мэдээлэл</h3>
+                            <div class="ordered-products">
+                                <div class="ordered-product-item">
+                                    <div class="product-img">
+                                        <img src="images/cushion.jpg" alt="Cushion">
+                                    </div>
+                                    <div class="product-info">
+                                        <h4>Cushion</h4>
+                                        <p>1 x ₮ 220,000</p>
+                                    </div>
+                                    <div class="product-total">₮ 220,000</div>
+                                </div>
+                                <div class="ordered-product-item">
+                                    <div class="product-img">
+                                        <img src="images/refill.jpg" alt="Refill">
+                                    </div>
+                                    <div class="product-info">
+                                        <h4>Refill</h4>
+                                        <p>1 x ₮ 30,000</p>
+                                    </div>
+                                    <div class="product-total">₮ 30,000</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="order-summary-section">
+                        <h3>Захиалгын дүн</h3>
+                        <div class="order-summary">
+                            <div class="summary-row">
+                                <span>Бүтээгдэхүүний дүн:</span>
+                                <span>₮ 250,000</span>
+                            </div>
+                            <div class="summary-row">
+                                <span>Хүргэлтийн төлбөр:</span>
+                                <span>₮ 5,000</span>
+                            </div>
+                            <div class="summary-row">
+                                <span>Татвар:</span>
+                                <span>₮ 25,000</span>
+                            </div>
+                            <div class="summary-row total">
+                                <span>Нийт дүн:</span>
+                                <span>₮ 280,000</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="order-actions">
+                        <button class="update-status-button">Төлөв шинэчлэх</button>
+                        <button class="print-invoice-button">Баримт хэвлэх</button>
+                        <button class="cancel-order-button">Захиалга цуцлах</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/orders.js"></script>
+</body>
+
+</html>

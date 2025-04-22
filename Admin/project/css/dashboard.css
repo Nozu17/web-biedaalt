@@ -1,0 +1,242 @@
+/* Dashboard specific styles */
+
+/* Dashboard Layout */
+.dashboard {
+    padding: var(--spacing-lg);
+    overflow-y: auto;
+}
+
+/* Stats Container */
+.stats-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-xl);
+}
+
+.stat-card {
+    background-color: var(--card-bg);
+    padding: var(--spacing-lg);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    display: flex;
+    align-items: center;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.stat-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    margin-right: var(--spacing-md);
+}
+
+.stat-icon.orders {
+    background-color: rgba(33, 150, 243, 0.1);
+    color: var(--secondary);
+}
+
+.stat-icon.revenue {
+    background-color: rgba(76, 175, 80, 0.1);
+    color: var(--success);
+}
+
+.stat-icon.total {
+    background-color: rgba(255, 152, 0, 0.1);
+    color: var(--accent);
+}
+
+.stat-icon.users {
+    background-color: rgba(156, 39, 176, 0.1);
+    color: #9C27B0;
+}
+
+.stat-content {
+    flex: 1;
+}
+
+.stat-content h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: var(--spacing-xs);
+}
+
+.stat-content p {
+    color: var(--text-secondary);
+    font-size: 14px;
+}
+
+.stat-change {
+    position: absolute;
+    top: var(--spacing-md);
+    right: var(--spacing-md);
+    font-size: 12px;
+    font-weight: 500;
+    padding: 2px 8px;
+    border-radius: 12px;
+}
+
+.stat-change.positive {
+    background-color: rgba(76, 175, 80, 0.1);
+    color: var(--success);
+}
+
+.stat-change.negative {
+    background-color: rgba(244, 67, 54, 0.1);
+    color: var(--error);
+}
+
+/* Dashboard Widget Layout */
+.dashboard-widgets {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+}
+
+.charts-row {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: var(--spacing-lg);
+}
+
+/* Chart Specific Styles */
+.chart-widget {
+    height: 100%;
+}
+
+.chart-container {
+    padding: var(--spacing-lg);
+    height: 300px;
+}
+
+.chart-options {
+    display: flex;
+    gap: var(--spacing-sm);
+}
+
+.chart-option {
+    background: none;
+    border: none;
+    padding: var(--spacing-xs) var(--spacing-sm);
+    font-size: 12px;
+    color: var(--text-secondary);
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+}
+
+.chart-option.active {
+    background-color: var(--primary);
+    color: white;
+}
+
+/* Top Products */
+.top-products {
+    padding: var(--spacing-md);
+}
+
+.product-item {
+    display: flex;
+    align-items: center;
+    padding: var(--spacing-md);
+    border-bottom: 1px solid var(--border);
+}
+
+.product-item:last-child {
+    border-bottom: none;
+}
+
+.product-rank {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background-color: var(--primary);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    margin-right: var(--spacing-md);
+}
+
+.product-info {
+    flex: 1;
+}
+
+.product-info h3 {
+    font-size: 16px;
+    margin-bottom: 2px;
+}
+
+.product-info p {
+    font-size: 13px;
+    color: var(--text-secondary);
+}
+
+.product-sales {
+    font-weight: 600;
+    color: var(--primary-dark);
+}
+
+/* Date Picker */
+.date-picker {
+    margin-left: var(--spacing-md);
+}
+
+.date-picker select {
+    padding: var(--spacing-xs) var(--spacing-lg) var(--spacing-xs) var(--spacing-md);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    font-size: 14px;
+    background-color: var(--card-bg);
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23666' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+    .charts-row {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+}
+
+@media (max-width: 768px) {
+    .dashboard {
+        padding: var(--spacing-md);
+    }
+    
+    .stats-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .stats-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .stat-card {
+        padding: var(--spacing-md);
+    }
+    
+    .top-products {
+        padding: var(--spacing-sm);
+    }
+    
+    .product-item {
+        padding: var(--spacing-sm);
+    }
+}

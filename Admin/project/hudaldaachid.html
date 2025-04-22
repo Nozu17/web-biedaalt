@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="mn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Манай баг - Admin Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Segoe+UI&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/team.css">
+</head>
+
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <h2>Admin</h2>
+            <button id="mobile-toggle" class="mobile-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+        <ul>
+            <li><a href="./dashboard.html"><span class="icon">📊</span>Хяналтын самбар</a></li>
+            <li><a href="./index.html"><span class="icon">📦</span>Бүтээгдэхүүн</a></li>
+            <li><a href="./zahialga.html"><span class="icon">🛒</span>Захиалгууд</a></li>
+            <li><a href="./uilchluulegch.html"><span class="icon">👥</span>Хэрэглэгчид</a></li>
+            <li><a href="./hudaldaachid.html" class="active"><span class="icon">👨‍💼</span>Манай баг</a></li>
+            <li><a href="./settings.html"><span class="icon">⚙️</span>Тохиргоо</a></li>
+        </ul>
+        <div class="sidebar-footer">
+            <p>© 2025 E-Commerce</p>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Header -->
+        <div class="header">
+            <div class="header-left">
+                <h1>Манай баг</h1>
+                <button id="addTeamMemberBtn" class="primary-button">
+                    <span>+</span> Шинэ гишүүн нэмэх
+                </button>
+            </div>
+            <div class="user">
+                <div class="notifications">
+                    <button class="icon-button" id="notifyBtn">🔔</button>
+                    <span class="badge">3</span>
+                    <div class="dropdown-menu" id="notifyDropdown">
+                        <div class="notification-item">
+                            <p>Шинэ захиалга хүлээн авлаа</p>
+                            <small>2 минутын өмнө</small>
+                        </div>
+                        <div class="notification-item">
+                            <p>Бүтээгдэхүүний үлдэгдэл бага байна</p>
+                            <small>1 цагийн өмнө</small>
+                        </div>
+                        <div class="notification-item">
+                            <p>Системийн шинэчлэлт</p>
+                            <small>Өчигдөр</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="user-profile">
+                    <span>Админ</span>
+                    <img src="/project/images/duk.jpg" alt="User" />
+                    <div class="dropdown-menu" id="profileDropdown">
+                        <a href="./settings.html">Тохиргоо</a>
+                        <a href="#">Гарах</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Team content -->
+        <div class="team-container">
+            <div class="org-chart">
+                <div class="org-level">
+                    <div class="org-card ceo">
+                        <div class="member-photo">
+                            <img src="/project/images/duk.jpg" alt="CEO">
+                        </div>
+                        <div class="member-info">
+                            <h3>Б.Дөлгөөн</h3>
+                            <p class="member-role">Гүйцэтгэх захирал</p>
+                            <div class="member-contact">
+                                <p>Dulguun@example.com</p>
+                                <p>9999-9999</p>
+                            </div>
+                            <div class="member-actions">
+                                <button class="view-member" data-id="1">Дэлгэрэнгүй</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="org-level directors">
+                    <div class="org-card">
+                        <div class="member-photo">
+                            <img src="/project/images/anu.jpg" alt="Marketing Director">
+                        </div>
+                        <div class="member-info">
+                            <h3>Б.Анужин</h3>
+                            <p class="member-role">Маркетингийн захирал</p>
+                            <div class="member-contact">
+                                <p>anujin@example.com</p>
+                                <p>9900-2233</p>
+                            </div>
+                            <div class="member-actions">
+                                <button class="view-member" data-id="2">Дэлгэрэнгүй</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="org-card">
+                        <div class="member-photo">
+                            <img src="/project/images/nomio.jpg" alt="Operations Director">
+                        </div>
+                        <div class="member-info">
+                            <h3>Б.Номинзул</h3>
+                            <p class="member-role">Үйл ажиллагааны захирал</p>
+                            <div class="member-contact">
+                                <p>nominzul@example.com</p>
+                                <p>9900-3344</p>
+                            </div>
+                            <div class="member-actions">
+                                <button class="view-member" data-id="3">Дэлгэрэнгүй</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="org-card">
+                        <div class="member-photo">
+                            <img src="/project/images/tsogto.jpg" alt="Finance Director">
+                        </div>
+                        <div class="member-info">
+                            <h3>Ч.Цогтдаваа</h3>
+                            <p class="member-role">Санхүүгийн захирал</p>
+                            <div class="member-contact">
+                                <p>tsogtdavaa@example.com</p>
+                                <p>9900-4455</p>
+                            </div>
+                            <div class="member-actions">
+                                <button class="view-member" data-id="4">Дэлгэрэнгүй</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+
+    <!-- Team Member Modal -->
+    <div id="teamMemberModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modalTitle">Шинэ гишүүн нэмэх</h2>
+                <button class="close-button">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="teamMemberForm">
+                    <div class="form-group">
+                        <label for="memberName">Нэр</label>
+                        <input type="text" id="memberName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="memberRole">Албан тушаал</label>
+                        <input type="text" id="memberRole" required>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="memberEmail">И-мэйл</label>
+                            <input type="email" id="memberEmail" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="memberPhone">Утас</label>
+                            <input type="text" id="memberPhone" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="memberDepartment">Хэлтэс</label>
+                        <select id="memberDepartment" required>
+                            <option value="">Сонгоно уу</option>
+                            <option value="executive">Удирдлага</option>
+                            <option value="marketing">Маркетинг</option>
+                            <option value="operations">Үйл ажиллагаа</option>
+                            <option value="finance">Санхүү</option>
+                            <option value="product">Бүтээгдэхүүн</option>
+                            <option value="sales">Борлуулалт</option>
+                            <option value="customer">Хэрэглэгчийн харилцаа</option>
+                            <option value="logistics">Хангамж</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="memberManager">Удирдлага</label>
+                        <select id="memberManager">
+                            <option value="">захирал</option>
+                            <option value="1">менежер</option>
+                            <option value="2">санхүүч</option>
+                            <option value="3">ажилтан</option>
+
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="memberBio">Товч танилцуулга</label>
+                        <textarea id="memberBio" rows="3"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="memberPhoto">Зураг</label>
+                        <input type="file" id="memberPhoto" accept="image/*">
+                    </div>
+                    <div class="form-actions">
+                        <button type="button" class="cancel-button">Цуцлах</button>
+                        <button type="submit" class="save-button">Хадгалах</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="js/main.js"></script>
+    <script src="js/team.js"></script>
+</body>
+
+</html>

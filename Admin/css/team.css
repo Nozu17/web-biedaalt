@@ -1,0 +1,298 @@
+/* Team page specific styles */
+
+/* Team Container */
+.team-container {
+    padding: var(--spacing-lg);
+}
+
+/* Organization Chart */
+.org-chart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-xl);
+}
+
+.org-level {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-lg);
+    width: 100%;
+    position: relative;
+}
+
+.org-level:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    width: 2px;
+    height: var(--spacing-md);
+    background-color: var(--border);
+}
+
+.org-level.directors, .org-level.managers {
+    flex-wrap: wrap;
+}
+
+.org-card {
+    background-color: var(--card-bg);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    padding: var(--spacing-md);
+    transition: var(--transition);
+    width: 280px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.org-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.org-card.ceo {
+    border-top: 4px solid #9C27B0;
+}
+
+.org-level.directors .org-card:nth-child(1) {
+    border-top: 4px solid #2196F3;
+}
+
+.org-level.directors .org-card:nth-child(2) {
+    border-top: 4px solid #4CAF50;
+}
+
+.org-level.directors .org-card:nth-child(3) {
+    border-top: 4px solid #FF9800;
+}
+
+.org-level.managers .org-card:nth-child(1) {
+    border-top: 4px solid #00BCD4;
+}
+
+.org-level.managers .org-card:nth-child(2) {
+    border-top: 4px solid #E91E63;
+}
+
+.org-level.managers .org-card:nth-child(3) {
+    border-top: 4px solid #673AB7;
+}
+
+.org-level.managers .org-card:nth-child(4) {
+    border-top: 4px solid #795548;
+}
+
+.member-photo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto var(--spacing-md);
+    border: 3px solid var(--border);
+}
+
+.member-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.member-info {
+    text-align: center;
+}
+
+.member-info h3 {
+    font-size: 18px;
+    margin-bottom: 4px;
+}
+
+.member-role {
+    color: var(--text-secondary);
+    font-size: 14px;
+    margin-bottom: var(--spacing-sm);
+}
+
+.member-contact {
+    color: var(--text-light);
+    font-size: 13px;
+    margin-bottom: var(--spacing-md);
+}
+
+.member-actions {
+    margin-top: auto;
+}
+
+.view-member {
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    padding: var(--spacing-xs) var(--spacing-md);
+    width: 100%;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.view-member:hover {
+    background-color: var(--primary-dark);
+}
+
+/* Member Detail Modal */
+.member-detail-container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+}
+
+.member-profile-header {
+    display: flex;
+    gap: var(--spacing-lg);
+    align-items: center;
+}
+
+.member-profile-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid var(--primary-light);
+}
+
+.member-profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.member-profile-info {
+    flex: 1;
+}
+
+.member-profile-info h3 {
+    font-size: 22px;
+    margin-bottom: 4px;
+}
+
+.member-role-detail {
+    color: var(--primary-dark);
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: var(--spacing-sm);
+}
+
+.member-contact-detail p {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 4px;
+    font-size: 14px;
+}
+
+.member-contact-detail p span:first-child {
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+.member-bio {
+    background-color: #f9f9f9;
+    padding: var(--spacing-md);
+    border-radius: var(--radius-md);
+}
+
+.member-bio h4 {
+    margin-bottom: var(--spacing-sm);
+    font-size: 16px;
+}
+
+.member-bio p {
+    line-height: 1.6;
+    color: var(--text-secondary);
+}
+
+.member-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-md);
+}
+
+.member-stat-card {
+    background-color: var(--card-bg);
+    padding: var(--spacing-md);
+    border-radius: var(--radius-md);
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+    border-left: 3px solid var(--primary);
+}
+
+.member-actions-detail {
+    display: flex;
+    gap: var(--spacing-md);
+}
+
+.send-email-button, .edit-member-button {
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: var(--radius-md);
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+    transition: var(--transition);
+    flex: 1;
+}
+
+.send-email-button {
+    background-color: var(--secondary);
+    color: white;
+}
+
+.send-email-button:hover {
+    background-color: #1976D2;
+}
+
+.edit-member-button {
+    background-color: var(--primary);
+    color: white;
+}
+
+.edit-member-button:hover {
+    background-color: var(--primary-dark);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+    .org-level {
+        flex-wrap: wrap;
+    }
+    
+    .org-level.directors, .org-level.managers {
+        justify-content: center;
+    }
+    
+    .org-card {
+        margin-bottom: var(--spacing-md);
+    }
+}
+
+@media (max-width: 768px) {
+    .team-container {
+        padding: var(--spacing-md);
+    }
+    
+    .member-profile-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .member-contact-detail p {
+        flex-direction: column;
+        gap: 4px;
+    }
+    
+    .member-stats {
+        grid-template-columns: 1fr;
+    }
+    
+    .member-actions-detail {
+        flex-direction: column;
+    }
+}

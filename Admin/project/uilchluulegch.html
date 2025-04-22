@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="mn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Хэрэглэгчид - Admin Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Segoe+UI&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/users.css">
+</head>
+
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <h2>Admin</h2>
+            <button id="mobile-toggle" class="mobile-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+        <ul>
+            <li><a href="./dashboard.html"><span class="icon">📊</span>Хяналтын самбар</a></li>
+            <li><a href="./index.html"><span class="icon">📦</span>Бүтээгдэхүүн</a></li>
+            <li><a href="./zahialga.html"><span class="icon">🛒</span>Захиалгууд</a></li>
+            <li><a href="./uilchluulegch.html" class="active"><span class="icon">👥</span>Хэрэглэгчид</a></li>
+            <li><a href="./hudaldaachid.html"><span class="icon">👨‍💼</span>Манай баг</a></li>
+            <li><a href="./settings.html"><span class="icon">⚙️</span>Тохиргоо</a></li>
+        </ul>
+        <div class="sidebar-footer">
+            <p>© 2025 E-Commerce</p>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Header -->
+        <div class="header">
+            <div class="header-left">
+                <h1>Хэрэглэгчид</h1>
+            </div>
+            <div class="user">
+                <div class="notifications">
+                    <button class="icon-button" id="notifyBtn">🔔</button>
+                    <span class="badge">3</span>
+                    <div class="dropdown-menu" id="notifyDropdown">
+                        <div class="notification-item">
+                            <p>Шинэ захиалга хүлээн авлаа</p>
+                            <small>2 минутын өмнө</small>
+                        </div>
+                        <div class="notification-item">
+                            <p>Бүтээгдэхүүний үлдэгдэл бага байна</p>
+                            <small>1 цагийн өмнө</small>
+                        </div>
+                        <div class="notification-item">
+                            <p>Системийн шинэчлэлт</p>
+                            <small>Өчигдөр</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="user-profile">
+                    <span>Админ</span>
+                    <img src="/project/images/duk.jpg" alt="User" />
+                    <div class="dropdown-menu" id="profileDropdown">
+                        <a href="./settings.html">Тохиргоо</a>
+                        <a href="#">Гарах</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Users content -->
+        <div class="users-container">
+            <div class="filters-bar">
+                <div class="search-container">
+                    <input type="text" id="searchUsers" placeholder="Хэрэглэгч хайх..." />
+                    <button class="search-button">🔍</button>
+                </div>
+                <div class="filter-controls">
+                    <select id="statusFilter">
+                        <option value="">Бүх төлөв</option>
+                        <option value="active">Идэвхтэй</option>
+                        <option value="inactive">Идэвхгүй</option>
+                    </select>
+                    <select id="sortUsers">
+                        <option value="newest">Шинэ бүртгэл эхэндээ</option>
+                        <option value="oldest">Хуучин бүртгэл эхэндээ</option>
+                        <option value="most-orders">Хамгийн их захиалгаар</option>
+                        <option value="most-spent">Хамгийн их зарцуулсанаар</option>
+                    </select>
+                </div>
+                <button id="exportUsersBtn" class="export-button">
+                    <span>📥</span> Экспорт
+                </button>
+            </div>
+
+            <div class="table-container">
+                <table class="data-table users-table">
+                    <thead>
+                        <tr>
+                            <th class="user-photo">Зураг</th>
+                            <th>Нэр</th>
+                            <th>И-мэйл</th>
+                            <th>Утас</th>
+                            <th>Бүртгүүлсэн огноо</th>
+                            <th>Захиалгын тоо</th>
+                            <th>Нийт худалдан авалт</th>
+                            <th>Төлөв</th>
+                            <th>Үйлдлүүд</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="user-photo"><img src="images/user1.jpg" alt="Болормаа.Б"></td>
+                            <td>Болормаа.Б</td>
+                            <td>bolormaa@example.com</td>
+                            <td>9911-2233</td>
+                            <td>2024-01-15</td>
+                            <td>12</td>
+                            <td>₮ 1,250,000</td>
+                            <td><span class="user-status active">Идэвхтэй</span></td>
+                            <td>
+                                <button class="view-user-button" data-id="1">Харах</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="user-photo"><img src="images/user2.jpg" alt="Мөнхсаран.Д"></td>
+                            <td>Мөнхсаран.Д</td>
+                            <td>munkhsaran@example.com</td>
+                            <td>9922-3344</td>
+                            <td>2024-02-20</td>
+                            <td>8</td>
+                            <td>₮ 850,000</td>
+                            <td><span class="user-status active">Идэвхтэй</span></td>
+                            <td>
+                                <button class="view-user-button" data-id="2">Харах</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="user-photo"><img src="images/user3.jpg" alt="Батбаяр.С"></td>
+                            <td>Батбаяр.С</td>
+                            <td>batbayar@example.com</td>
+                            <td>9933-4455</td>
+                            <td>2024-03-10</td>
+                            <td>5</td>
+                            <td>₮ 620,000</td>
+                            <td><span class="user-status active">Идэвхтэй</span></td>
+                            <td>
+                                <button class="view-user-button" data-id="3">Харах</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="user-photo"><img src="images/user4.jpg" alt="Энхжаргал.Г"></td>
+                            <td>Энхжаргал.Г</td>
+                            <td>enkhjargal@example.com</td>
+                            <td>9944-5566</td>
+                            <td>2024-03-22</td>
+                            <td>3</td>
+                            <td>₮ 450,000</td>
+                            <td><span class="user-status active">Идэвхтэй</span></td>
+                            <td>
+                                <button class="view-user-button" data-id="4">Харах</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="user-photo"><img src="images/user5.jpg" alt="Нямдорж.Ц"></td>
+                            <td>Нямдорж.Ц</td>
+                            <td>nyamdorj@example.com</td>
+                            <td>9955-6677</td>
+                            <td>2024-04-05</td>
+                            <td>1</td>
+                            <td>₮ 180,000</td>
+                            <td><span class="user-status inactive">Идэвхгүй</span></td>
+                            <td>
+                                <button class="view-user-button" data-id="5">Харах</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="pagination">
+                <button class="page-button" disabled>&laquo;</button>
+                <button class="page-button active">1</button>
+                <button class="page-button">2</button>
+                <button class="page-button">3</button>
+                <button class="page-button">&raquo;</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- User Detail Modal -->
+    <div id="userModal" class="modal">
+        <div class="modal-content large-modal">
+            <div class="modal-header">
+                <h2>Хэрэглэгчийн дэлгэрэнгүй</h2>
+                <button class="close-button">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="user-detail-container">
+                    <div class="user-profile-section">
+                        <div class="user-profile-header">
+                            <div class="user-profile-image">
+                                <img src="images/user1.jpg" alt="Болормаа.Б" id="modalUserImage">
+                            </div>
+                            <div class="user-profile-info">
+                                <h3 id="modalUserName">Болормаа.Б</h3>
+                                <p id="modalUserEmail">bolormaa@example.com</p>
+                                <p id="modalUserPhone">9911-2233</p>
+                                <span class="user-status active" id="modalUserStatus">Идэвхтэй</span>
+                            </div>
+                        </div>
+
+                        <div class="user-details-grid">
+                            <div class="user-detail-item">
+                                <span class="info-label">Бүртгүүлсэн огноо:</span>
+                                <span class="info-value" id="modalJoinDate">2024-01-15</span>
+                            </div>
+                            <div class="user-detail-item">
+                                <span class="info-label">Хаяг:</span>
+                                <span class="info-value" id="modalAddress">Улаанбаатар, Баянзүрх дүүрэг, 15-р
+                                    хороо</span>
+                            </div>
+                            <div class="user-detail-item">
+                                <span class="info-label">Сүүлд нэвтэрсэн:</span>
+                                <span class="info-value" id="modalLastLogin">2025-04-13 16:45:22</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="user-stats-section">
+                        <div class="user-stat-card">
+                            <div class="stat-value" id="modalOrderCount">12</div>
+                            <div class="stat-label">Захиалга</div>
+                        </div>
+                        <div class="user-stat-card">
+                            <div class="stat-value" id="modalTotalSpent">₮ 1,250,000</div>
+                            <div class="stat-label">Нийт худалдан авалт</div>
+                        </div>
+                        <div class="user-stat-card">
+                            <div class="stat-value" id="modalAvgOrder">₮ 104,166</div>
+                            <div class="stat-label">Захиалга дундаж</div>
+                        </div>
+                        <div class="user-stat-card">
+                            <div class="stat-value" id="modalLastOrder">2025-04-13</div>
+                            <div class="stat-label">Сүүлийн захиалга</div>
+                        </div>
+                    </div>
+
+                    <div class="user-tabs">
+                        <div class="tab-buttons">
+                            <button class="tab-button active" data-tab="orders">Захиалгууд</button>
+                            <button class="tab-button" data-tab="activity">Үйл ажиллагаа</button>
+                            <button class="tab-button" data-tab="notes">Тэмдэглэл</button>
+                        </div>
+
+                        <div class="tab-content active" id="orders-tab">
+                            <table class="data-table">
+                                <thead>
+                                    <tr>
+                                        <th>Захиалга ID</th>
+                                        <th>Огноо</th>
+                                        <th>Бүтээгдэхүүн</th>
+                                        <th>Үнэ</th>
+                                        <th>Төлөв</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>#001234</td>
+                                        <td>2025-04-13</td>
+                                        <td>Cushion + Refill</td>
+                                        <td>₮ 250,000</td>
+                                        <td><span class="status pending">Хүргэлтэд</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>#001180</td>
+                                        <td>2025-03-28</td>
+                                        <td>Skincare Set</td>
+                                        <td>₮ 320,000</td>
+                                        <td><span class="status completed">Амжилттай</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>#001120</td>
+                                        <td>2025-03-10</td>
+                                        <td>Foundation</td>
+                                        <td>₮ 75,000</td>
+                                        <td><span class="status completed">Амжилттай</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="tab-content" id="activity-tab">
+                            <div class="activity-timeline">
+                                <div class="activity-item">
+                                    <div class="activity-date">2025-04-13 16:45</div>
+                                    <div class="activity-icon">🔍</div>
+                                    <div class="activity-content">
+                                        <h4>Системд нэвтэрсэн</h4>
+                                        <p>Хэрэглэгч системд амжилттай нэвтэрсэн</p>
+                                    </div>
+                                </div>
+                                <div class="activity-item">
+                                    <div class="activity-date">2025-04-13 16:50</div>
+                                    <div class="activity-icon">🛒</div>
+                                    <div class="activity-content">
+                                        <h4>Захиалга үүсгэсэн</h4>
+                                        <p>Захиалга #001234 амжилттай үүссэн</p>
+                                    </div>
+                                </div>
+                                <div class="activity-item">
+                                    <div class="activity-date">2025-04-13 16:55</div>
+                                    <div class="activity-icon">💳</div>
+                                    <div class="activity-content">
+                                        <h4>Төлбөр хийсэн</h4>
+                                        <p>Захиалга #001234-д ₮ 250,000 төлсөн</p>
+                                    </div>
+                                </div>
+                                <div class="activity-item">
+                                    <div class="activity-date">2025-03-28 10:12</div>
+                                    <div class="activity-icon">🛒</div>
+                                    <div class="activity-content">
+                                        <h4>Захиалга үүсгэсэн</h4>
+                                        <p>Захиалга #001180 амжилттай үүссэн</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-content" id="notes-tab">
+                            <div class="notes-container">
+                                <div class="note-list">
+                                    <div class="note-item">
+                                        <div class="note-header">
+                                            <h4>VIP хэрэглэгч</h4>
+                                            <span>2025-02-10</span>
+                                        </div>
+                                        <p>Хэрэглэгч манай онлайн дэлгүүрээс байнга худалдан авалт хийдэг. VIP хөнгөлөлт
+                                            санал болгох.</p>
+                                    </div>
+                                    <div class="note-item">
+                                        <div class="note-header">
+                                            <h4>Төрсөн өдөр</h4>
+                                            <span>2025-01-20</span>
+                                        </div>
+                                        <p>Хэрэглэгчийн төрсөн өдөр 5-р сарын 15. Бэлэг урамшуулал илгээх.</p>
+                                    </div>
+                                </div>
+                                <div class="add-note">
+                                    <h4>Шинэ тэмдэглэл нэмэх</h4>
+                                    <div class="note-form">
+                                        <input type="text" placeholder="Гарчиг" id="noteTitle">
+                                        <textarea placeholder="Тэмдэглэл" id="noteText"></textarea>
+                                        <button class="add-note-button">Нэмэх</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="user-actions">
+                        <button class="send-email-button">И-мэйл илгээх</button>
+                        <button class="edit-user-button">Мэдээлэл засах</button>
+                        <button class="block-user-button">Блоклох</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/users.js"></script>
+</body>
+
+</html>

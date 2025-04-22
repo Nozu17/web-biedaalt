@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="mn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Segoe+UI&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <h2>Admin</h2>
+            <button id="mobile-toggle" class="mobile-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+        <ul>
+            <li><a href="./dashboard.html" class="active"><span class="icon">📊</span>Хяналтын самбар</a></li>
+            <li><a href="./index.html"><span class="icon">📦</span>Бүтээгдэхүүн</a></li>
+            <li><a href="./zahialga.html"><span class="icon">🛒</span>Захиалгууд</a></li>
+            <li><a href="./uilchluulegch.html"><span class="icon">👥</span>Хэрэглэгчид</a></li>
+            <li><a href="./hudaldaachid.html"><span class="icon">👨‍💼</span>Манай баг</a></li>
+            <li><a href="./settings.html"><span class="icon">⚙️</span>Тохиргоо</a></li>
+        </ul>
+        <div class="sidebar-footer">
+            <p>© 2025 E-Commerce</p>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Header -->
+        <div class="header">
+            <div class="header-left">
+                <h1>Хяналтын Самбар</h1>
+                <div class="date-picker">
+                    <select id="datePeriod">
+                        <option value="today">Өнөөдөр</option>
+                        <option value="yesterday">Өчигдөр</option>
+                        <option value="week">Энэ долоо хоног</option>
+                        <option value="month" selected>Энэ сар</option>
+                        <option value="year">Энэ жил</option>
+                    </select>
+                </div>
+            </div>
+            <div class="user">
+                <div class="notifications">
+                    <button class="icon-button" id="notifyBtn">🔔</button>
+                    <span class="badge">3</span>
+                    <div class="dropdown-menu" id="notifyDropdown">
+                        <div class="notification-item">
+                            <p>Шинэ захиалга хүлээн авлаа</p>
+                            <small>2 минутын өмнө</small>
+                        </div>
+                        <div class="notification-item">
+                            <p>Бүтээгдэхүүний үлдэгдэл бага байна</p>
+                            <small>1 цагийн өмнө</small>
+                        </div>
+                        <div class="notification-item">
+                            <p>Системийн шинэчлэлт</p>
+                            <small>Өчигдөр</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="user-profile">
+                    <span>Админ</span>
+                    <img src="/project/images/duk.jpg" alt="User" />
+                    <div class="dropdown-menu" id="profileDropdown">
+                        <a href="./settings.html">Тохиргоо</a>
+                        <a href="#">Гарах</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dashboard content -->
+        <div class="dashboard">
+            <!-- Stats -->
+            <div class="stats-container">
+                <div class="stat-card">
+                    <div class="stat-icon orders">🛒</div>
+                    <div class="stat-content">
+                        <h3>₮ 150,000</h3>
+                        <p>Өнөөдрийн орлого</p>
+                    </div>
+                    <div class="stat-change positive">+12.5%</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon revenue">💰</div>
+                    <div class="stat-content">
+                        <h3>₮ 3,500,000</h3>
+                        <p>Сар бүрийн орлого</p>
+                    </div>
+                    <div class="stat-change positive">+8.2%</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon total">📈</div>
+                    <div class="stat-content">
+                        <h3>₮ 50,000,000</h3>
+                        <p>Бүх цагийн орлого</p>
+                    </div>
+                    <div class="stat-change positive">+24.8%</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon users">👥</div>
+                    <div class="stat-content">
+                        <h3>1,230</h3>
+                        <p>Нийт хэрэглэгчид</p>
+                    </div>
+                    <div class="stat-change positive">+5.3%</div>
+                </div>
+            </div>
+
+            <div class="dashboard-widgets">
+                <div class="widget">
+                    <!-- Orders Table -->
+                    <div class="widget-header">
+                        <h2>Сүүлийн захиалгууд</h2>
+                        <a href="./zahialga.html" class="view-all">Бүгдийг харах</a>
+                    </div>
+                    <div class="table-container">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Захиалга ID</th>
+                                    <th>Бүтээгдэхүүний нэр</th>
+                                    <th>Үнэ</th>
+                                    <th>Огноо</th>
+                                    <th>Төлөв</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>#001234</td>
+                                    <td>Cushion</td>
+                                    <td>₮ 250,000</td>
+                                    <td>2025-04-13</td>
+                                    <td><span class="status pending">Хүргэлтэд</span></td>
+                                </tr>
+                                <tr>
+                                    <td>#001235</td>
+                                    <td>Primer</td>
+                                    <td>₮ 50,000</td>
+                                    <td>2025-04-12</td>
+                                    <td><span class="status awaiting">Төлбөр хүлээгдэж байна</span></td>
+                                </tr>
+                                <tr>
+                                    <td>#001236</td>
+                                    <td>Foundation</td>
+                                    <td>₮ 75,000</td>
+                                    <td>2025-04-11</td>
+                                    <td><span class="status completed">Амжилттай</span></td>
+                                </tr>
+                                <tr>
+                                    <td>#001237</td>
+                                    <td>Lipstick Set</td>
+                                    <td>₮ 120,000</td>
+                                    <td>2025-04-10</td>
+                                    <td><span class="status completed">Амжилттай</span></td>
+                                </tr>
+                                <tr>
+                                    <td>#001238</td>
+                                    <td>Eyeshadow Palette</td>
+                                    <td>₮ 180,000</td>
+                                    <td>2025-04-09</td>
+                                    <td><span class="status cancelled">Цуцлагдсан</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="charts-row">
+                    <!-- Chart -->
+                    <div class="widget chart-widget">
+                        <div class="widget-header">
+                            <h2>Борлуулалтын график</h2>
+                            <div class="chart-options">
+                                <button class="chart-option active" data-period="weekly">7 хоног</button>
+                                <button class="chart-option" data-period="monthly">Сараар</button>
+                                <button class="chart-option" data-period="yearly">Жилээр</button>
+                            </div>
+                        </div>
+                        <div class="chart-container">
+                            <canvas id="salesChart"></canvas>
+                        </div>
+                    </div>
+
+                    <!-- Top Products -->
+                    <div class="widget">
+                        <div class="widget-header">
+                            <h2>Шилдэг бүтээгдэхүүн</h2>
+                            <a href="./index.html" class="view-all">Бүгдийг харах</a>
+                        </div>
+                        <div class="top-products">
+                            <div class="product-item">
+                                <div class="product-rank">1</div>
+                                <div class="product-info">
+                                    <h3>Cushion</h3>
+                                    <p>₮ 250,000 × 42 ширхэг</p>
+                                </div>
+                                <div class="product-sales">₮ 10,500,000</div>
+                            </div>
+                            <div class="product-item">
+                                <div class="product-rank">2</div>
+                                <div class="product-info">
+                                    <h3>Foundation</h3>
+                                    <p>₮ 75,000 × 68 ширхэг</p>
+                                </div>
+                                <div class="product-sales">₮ 5,100,000</div>
+                            </div>
+                            <div class="product-item">
+                                <div class="product-rank">3</div>
+                                <div class="product-info">
+                                    <h3>Lipstick Set</h3>
+                                    <p>₮ 120,000 × 36 ширхэг</p>
+                                </div>
+                                <div class="product-sales">₮ 4,320,000</div>
+                            </div>
+                            <div class="product-item">
+                                <div class="product-rank">4</div>
+                                <div class="product-info">
+                                    <h3>Eyeshadow Palette</h3>
+                                    <p>₮ 180,000 × 22 ширхэг</p>
+                                </div>
+                                <div class="product-sales">₮ 3,960,000</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+
+</html>

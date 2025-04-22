@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="mn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Бүтээгдэхүүн - Admin Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Segoe+UI&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/products.css">
+</head>
+
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <h2>Admin</h2>
+            <button id="mobile-toggle" class="mobile-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+        <ul>
+            <li><a href="./dashboard.html"><span class="icon">📊</span>Хяналтын самбар</a></li>
+            <li><a href="./index.html" class="active"><span class="icon">📦</span>Бүтээгдэхүүн</a></li>
+            <li><a href="./zahialga.html"><span class="icon">🛒</span>Захиалгууд</a></li>
+            <li><a href="./uilchluulegch.html"><span class="icon">👥</span>Хэрэглэгчид</a></li>
+            <li><a href="./hudaldaachid.html"><span class="icon">👨‍💼</span>Манай баг</a></li>
+            <li><a href="./settings.html"><span class="icon">⚙️</span>Тохиргоо</a></li>
+        </ul>
+        <div class="sidebar-footer">
+            <p>© 2025 E-Commerce</p>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Header -->
+        <div class="header">
+            <div class="header-left">
+                <h1>Бүтээгдэхүүн</h1>
+                <button id="addProductBtn" class="primary-button">
+                    <span>+</span> Шинэ бүтээгдэхүүн
+                </button>
+            </div>
+            <div class="user">
+                <div class="notifications">
+                    <button class="icon-button" id="notifyBtn">🔔</button>
+                    <span class="badge">3</span>
+                    <div class="dropdown-menu" id="notifyDropdown">
+                        <div class="notification-item">
+                            <p>Шинэ захиалга хүлээн авлаа</p>
+                            <small>2 минутын өмнө</small>
+                        </div>
+                        <div class="notification-item">
+                            <p>Бүтээгдэхүүний үлдэгдэл бага байна</p>
+                            <small>1 цагийн өмнө</small>
+                        </div>
+                        <div class="notification-item">
+                            <p>Системийн шинэчлэлт</p>
+                            <small>Өчигдөр</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="user-profile">
+                    <span>Админ</span>
+                    <img src="/project/images/duk.jpg" alt="User" />
+                    <div class="dropdown-menu" id="profileDropdown">
+                        <a href="./settings.html">Тохиргоо</a>
+                        <a href="#">Гарах</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Products content -->
+        <div class="products-container">
+            <div class="filters-bar">
+                <div class="search-container">
+                    <input type="text" id="searchProduct" placeholder="Бүтээгдэхүүн хайх..." />
+                    <button class="search-button">🔍</button>
+                </div>
+                <div class="filter-controls">
+                    <select id="categoryFilter">
+                        <option value="">Бүх ангилал</option>
+                        <option value="makeup">Нүүр будалт</option>
+                        <option value="skincare">Арьс арчилгаа</option>
+                        <option value="haircare">Үс арчилгаа</option>
+                        <option value="fragrance">Үнэртэн</option>
+                    </select>
+                    <select id="stockFilter">
+                        <option value="">Бүх үлдэгдэл</option>
+                        <option value="instock">Байгаа</option>
+                        <option value="lowstock">Бага үлдэгдэлтэй</option>
+                        <option value="outofstock">Дууссан</option>
+                    </select>
+                    <select id="sortProducts">
+                        <option value="newest">Шинэ нь эхэндээ</option>
+                        <option value="oldest">Хуучин нь эхэндээ</option>
+                        <option value="priceAsc">Үнэ: бага - их</option>
+                        <option value="priceDesc">Үнэ: их - бага</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="product-grid">
+                <!-- Product Card 1 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="/project/images/1.png" alt="Цайруулах тос">
+                        <span class="stock-tag in-stock">Байгаа</span>
+                    </div>
+                    <div class="product-details">
+                        <h3>Цайруулах тос</h3>
+                        <p class="product-category">Арьс арчилгаа</p>
+                        <div class="product-meta">
+                            <p class="product-price">39,000₮</p>
+                            <p class="product-stock">Үлдэгдэл: 15</p>
+                        </div>
+                        <div class="product-actions">
+                            <button class="edit-button">Засах</button>
+                            <button class="delete-button">Устгах</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 2 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="/project/images/2.jpg" alt="Цайруулах серум">
+                        <span class="stock-tag in-stock">Байгаа</span>
+                    </div>
+                    <div class="product-details">
+                        <h3>Цайруулах серум</h3>
+                        <p class="product-category">Арьс арчилгаа</p>
+                        <div class="product-meta">
+                            <p class="product-price">39,000₮</p>
+                            <p class="product-stock">Үлдэгдэл: 10</p>
+                        </div>
+                        <div class="product-actions">
+                            <button class="edit-button">Засах</button>
+                            <button class="delete-button">Устгах</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 3 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="/project/images/3.jpg" alt="Нүхжилтийн эсрэг тос">
+                        <span class="stock-tag low-stock">Бага үлдэгдэлтэй</span>
+                    </div>
+                    <div class="product-details">
+                        <h3>Нүхжилтийн эсрэг тос</h3>
+                        <p class="product-category">Арьс арчилгаа</p>
+                        <div class="product-meta">
+                            <p class="product-price">39,000₮</p>
+                            <p class="product-stock">Үлдэгдэл: 3</p>
+                        </div>
+                        <div class="product-actions">
+                            <button class="edit-button">Засах</button>
+                            <button class="delete-button">Устгах</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 4 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="/project/images/4.jpg" alt="Нүхжилтийн эсрэг серум">
+                        <span class="stock-tag in-stock">Байгаа</span>
+                    </div>
+                    <div class="product-details">
+                        <h3>Нүхжилтийн эсрэг серум</h3>
+                        <p class="product-category">Арьс арчилгаа</p>
+                        <div class="product-meta">
+                            <p class="product-price">39,000₮</p>
+                            <p class="product-stock">Үлдэгдэл: 12</p>
+                        </div>
+                        <div class="product-actions">
+                            <button class="edit-button">Засах</button>
+                            <button class="delete-button">Устгах</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 5 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="/project/images/5.jpg" alt="Нүхжилтийн эсрэг тонер">
+                        <span class="stock-tag in-stock">Байгаа</span>
+                    </div>
+                    <div class="product-details">
+                        <h3>Нүхжилтийн эсрэг тонер</h3>
+                        <p class="product-category">Арьс арчилгаа</p>
+                        <div class="product-meta">
+                            <p class="product-price">39,000₮</p>
+                            <p class="product-stock">Үлдэгдэл: 7</p>
+                        </div>
+                        <div class="product-actions">
+                            <button class="edit-button">Засах</button>
+                            <button class="delete-button">Устгах</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 6 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="/project/images/6.jpg" alt="Үрчлээний эсрэг зовхины тос">
+                        <span class="stock-tag in-stock">Байгаа</span>
+                    </div>
+                    <div class="product-details">
+                        <h3>Үрчлээний эсрэг зовхины тос</h3>
+                        <p class="product-category">Арьс арчилгаа</p>
+                        <div class="product-meta">
+                            <p class="product-price">55,000₮</p>
+                            <p class="product-stock">Үлдэгдэл: 9</p>
+                        </div>
+                        <div class="product-actions">
+                            <button class="edit-button">Засах</button>
+                            <button class="delete-button">Устгах</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 7 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="/project/images/7.jpg" alt="Үрчлээний эсрэг тос">
+                        <span class="stock-tag in-stock">Байгаа</span>
+                    </div>
+                    <div class="product-details">
+                        <h3>Үрчлээний эсрэг тос</h3>
+                        <p class="product-category">Арьс арчилгаа</p>
+                        <div class="product-meta">
+                            <p class="product-price">39,000₮</p>
+                            <p class="product-stock">Үлдэгдэл: 6</p>
+                        </div>
+                        <div class="product-actions">
+                            <button class="edit-button">Засах</button>
+                            <button class="delete-button">Устгах</button>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="pagination">
+                    <button class="page-button" disabled>&laquo;</button>
+                    <button class="page-button active">1</button>
+                    <button class="page-button">2</button>
+                    <button class="page-button">3</button>
+                    <button class="page-button">&raquo;</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal for adding/editing products -->
+        <div id="productModal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 id="modalTitle">Шинэ бүтээгдэхүүн нэмэх</h2>
+                    <button class="close-button">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <form id="productForm">
+                        <div class="form-group">
+                            <label for="productName">Бүтээгдэхүүний нэр</label>
+                            <input type="text" id="productName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="productCategory">Ангилал</label>
+                            <select id="productCategory" required>
+                                <option value="">Сонгоно уу</option>
+                                <option value="makeup">Нүүр будалт</option>
+                                <option value="skincare">Арьс арчилгаа</option>
+                                <option value="haircare">Үс арчилгаа</option>
+                                <option value="fragrance">Үнэртэн</option>
+                            </select>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="productPrice">Үнэ (₮)</label>
+                                <input type="number" id="productPrice" min="0" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="productStock">Үлдэгдэл</label>
+                                <input type="number" id="productStock" min="0" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="productDescription">Тайлбар</label>
+                            <textarea id="productDescription" rows="3"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="productImage">Зураг</label>
+                            <input type="file" id="productImage" accept="image/*">
+                        </div>
+                        <div class="form-actions">
+                            <button type="button" class="cancel-button">Цуцлах</button>
+                            <button type="submit" class="save-button">Хадгалах</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <script src="js/main.js"></script>
+        <script src="js/products.js"></script>
+</body>
+
+</html>

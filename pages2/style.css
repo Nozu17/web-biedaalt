@@ -318,6 +318,9 @@ footer {
   
   .main-image {
     width: 100%;
+    height: 400px;
+    object-fit: cover;        /* зургийг дүүргэж, пропорцыг хадгалж, хасалт хийнэ */
+    object-position: center;
     border-radius: 12px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
   }
@@ -509,6 +512,8 @@ footer {
   height: 200px;
   margin-bottom: 10px;
   border-radius: 5px;
+  object-fit: cover;        /* зургийг дүүргэж, пропорцыг хадгалж, хасалт хийнэ */
+  object-position: center;
 }
 .carousel-item:hover img {
   opacity: 0.8;
