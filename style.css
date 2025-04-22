@@ -586,4 +586,12 @@ footer {
     padding: 10px 15px 20px;
     margin: 0;
   }
-  
+  .article-card a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.article-card a:hover {
+    text-decoration: none; /* доогуур зураас арилгах */
+    color: inherit;         /* цэнхэр өнгийг болиулах */
+}

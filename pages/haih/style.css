@@ -13,6 +13,7 @@ body {
     font-size: 14px;
 }
 
+
 /* Навигацийн самбар */
 nav {
     display: flex;
@@ -49,6 +50,63 @@ nav {
     margin-left: 15px;
     text-decoration: none;
     font-size: 20px;
+}
+
+/* Асуулт */
+.justified {
+    text-align: justify;
+}
+
+.faq-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* эсвэл center */
+    min-height: 100vh;
+    padding: 40px 20px;
+}
+
+.faq {
+    max-width: 700px;
+    width: 100%;
+    background: white;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.faq h2 {
+    text-align: center;
+    margin-bottom: 24px;
+    font-size: 24px;
+}
+
+.faq-item {
+    border-bottom: 1px solid #ddd;
+    padding: 12px 0;
+}
+
+.faq-btn {
+    background: none;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq-content {
+    display: none;
+    margin-top: 8px;
+    color: #444;
+    font-size: 15px;
+}
+
+.faq-item.active .faq-content {
+    display: block;
 }
 
 /* Banner хэсэг */
@@ -110,7 +168,7 @@ main {
 
 .product-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
 }
 
@@ -122,9 +180,12 @@ main {
 }
 
 .product-card img {
-    max-width: 100%;
-    height: auto;
     margin-bottom: 10px;
+    width: 100%;
+    height: 250px;
+    border-radius: 5px;
+    object-fit: cover;        /* зургийг дүүргэж, пропорцыг хадгалж, хасалт хийнэ */
+    object-position: center;
 }
 
 .product-card h3 {
@@ -205,20 +266,6 @@ footer {
         margin-top: 10px;
     }
 
-    .banner {
-        flex-direction: column;
-        text-align: center;
-        padding: 30px 20px;
-    }
-
-    .banner .text {
-        max-width: 100%;
-    }
-
-    .banner .image img {
-        margin-top: 20px;
-    }
-
     .footer-content {
         flex-direction: column;
         align-items: center;
@@ -226,127 +273,133 @@ footer {
     }
 }
 
-.container {
-    display: flex;
-    padding: 30px;
-    gap: 30px;
-    background-color: #f7f7f7;
-  }
-  
-  .sidebar {
-    width: 220px;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-  }
-  
-  .sidebar h3 {
-    font-size: 18px;
-    margin-bottom: 15px;
-  }
-  
-  .sidebar ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .sidebar ul li {
-    margin-bottom: 10px;
-  }
-  
-  .sidebar ul li a {
-    color: #333;
-    text-decoration: none;
-  }
-  
-  .sidebar ul li a:hover {
-    color: #e91e63;
-  }
+a:link {
+    color: black;
+}
 
-  
-  .price {
-    font-weight: bold;
-    font-size: 16px;
-    margin-bottom: 10px;
-  }
-  
-  .btn {
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 8px;
-    font-size: 14px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-/* Search bar */
-    .search-bar-container {
+a:vlink {
+    color: black;
+}
+
+a:active {
+    color: black;
+}
+.search-bar-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
-    padding: 10px 20px;
-    background-color: #f5f5f5;
+    padding: 15px;
+    background-color: #f9f9f9;
     border-bottom: 1px solid #ddd;
 }
-.sidebar ul li a:hover {
-    color: #a32014;
-    font-weight: bold;
-}
 
-.search-bar-container input[type="text"] {
+.search-bar-container input {
+    width: 300px;
     padding: 10px;
-    width: 100%;
-    max-width: 600px; /* илүү урт болгосон */
+    font-size: 16px;
+    margin-right: 10px;
+    border-radius: 5px;
     border: 1px solid #ccc;
-    border-radius: 6px;
-    font-size: 14px;
 }
 
 .search-bar-container button {
     padding: 10px 15px;
+    background-color: #a32014;
+    color: white;
     border: none;
-    color: rgb(0, 0, 0);
-    border-radius: 6px;
+    border-radius: 5px;
     cursor: pointer;
-    font-size: 14px;
 }
-.sidebar .category-list {
+body {
+    font-family: 'Arial', sans-serif;
+    background: white;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .search-page {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px;
+  }
+  
+  .search-header {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+    size: 80%;
+  }
+  
+  .search-input {
+    flex: 1;
+    font-size: 20px;
+    border: none;
+    outline: none;
+    font-weight: bold;
+    color: #444;
+  }
+  
+  .search-icon {
+    font-size: 20px;
+    color: #888;
+    margin-left: 10px;
+  }
+  
+  .search-list {
     list-style: none;
     padding: 0;
-    margin: 0;
-}
-
-.sidebar .category-btn {
-    background: none;
-    border: none;
-    font-weight: bold;
-    padding: 10px 0;
-    width: 100%;
-    text-align: left;
-    cursor: pointer;
-    font-size: 16px;
-    color: #333;
-}
-
-.sidebar .subcategory {
-    list-style: none;
-    padding-left: 15px;
-    display: none;
-    margin-top: 5px;
-}
-
-.sidebar .subcategory li {
-    padding: 5px 0;
-}
-
-.sidebar .subcategory li a {
+    margin-top: 30px;
+  }
+  
+  .search-list li {
+    border-bottom: 1px solid #eee;
+  }
+  
+  .search-list li a {
+    display: flex;
+    justify-content: space-between;
+    padding: 14px 0;
     text-decoration: none;
-    color: #555;
-    font-size: 14px;
-}
-
-.sidebar .subcategory li a:hover {
-    color: #a32014;
-}
+    color: #333;
+    font-size: 18px;
+  }
+  
+  .search-list li a span {
+    color: #888;
+  }
+  /* Өмнөх CSS-үүдийг хадгалаарай, дараах хэсгийг нэмж бичнэ */
+.expandable {
+    cursor: pointer;
+  }
+  
+  .expand-title {
+    display: flex;
+    justify-content: space-between;
+    padding: 14px 0;
+    font-size: 18px;
+    color: #333;
+    font-weight: 500;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .sub-list {
+    display: none;
+    padding-left: 20px;
+    font-size: 16px;
+    color: #444;
+  }
+  
+  .sub-list li {
+    padding: 8px 0;
+  }
+  
+  .expandable.open .sub-list {
+    display: block;
+  }
+  
+  .expandable.open .arrow {
+    transform: rotate(90deg);
+    transition: transform 0.2s;
+  }
+  
