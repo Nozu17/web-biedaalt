@@ -15,7 +15,7 @@
             Үрчлээний эсрэг эсвэл нүхжилтийн эсрэг багц + зөвхөн тос худалдаж авбал 🎁 Төгс хамгаалалт НАРНЫ ТОС БЭЛЭГЛЭНЭ!  
         </div>
         <nav>
-            <img src="../../nemelt/logo.png" class="logo" alt="img">
+            <a href="../../index.html"><img src="../../nemelt/logo.png" class="logo" alt="img"></a>
             <ul class="menu">
                 <li><a href="../bugd/index.html">Бүгд</a></li>
                 <li><a href="../bagts/index.html">Багц</a></li>
@@ -24,8 +24,9 @@
                 <li><a href="../hymdral/index.html">Хямдрал</a></li>
             </ul>
             <div class="nav-icons">
+                <a href="../haih/index.html">🔍</a>
                 <a href="../sags/index.html">🛒</a>
-                <a href="../nevtreh/index.html">👤</a>
+                <a href="../haih/index.html">👤</a>
             </div>
         </nav>
     </header>
@@ -40,14 +41,9 @@
         <ul class="search-list">
 
             <li class="expandable">
-                <div class="expand-title">
-                  <span>Бүх бүтээгдэхүүн</span>
-                  <span class="arrow">›</span>
+                <div class="expand-title"> <a href="../bugd/index.html">
+                  <span>Бүх бүтээгдэхүүн</span> </a>
                 </div>
-                <ul class="sub-list">
-                  <li>✨ Шинэ бүтээгдэхүүн</li>
-                  <li>🔥 Эрэлттэй бүтээгдэхүүн</li>
-                </ul>
               </li>
         
               <li class="expandable">
@@ -56,8 +52,11 @@
                   <span class="arrow">›</span>
                 </div>
                 <ul class="sub-list">
-                  <li>🎁 Чийгшүүлэх багц</li>
-                  <li>🧼 Гүн цэвэрлэгээний багц</li>
+                    <li><a href="../../pages2/nuur_budag_del/longwear+gel.html">Longwear Foundation + Gel Primer</a></li>
+                    <li>Cushion + Refill</li>
+                    <li>Cushion + Refill + Whitening Primer</li>
+                    <li>Cushion + Refill + Gel Primer</li>
+                    <li>Whitening Primer + Foundation</li>
                 </ul>
               </li>
         
@@ -67,8 +66,11 @@
                   <span class="arrow">›</span>
                 </div>
                 <ul class="sub-list">
-                  <li>🧴 Серум</li>
-                  <li>💧 Тоник</li>
+                    <li> <a href="../../pages2/aris_del/aris1.html">Цайруулах тос</a> </li>
+                    <li><a href="../../pages2/aris_del/aris2.html">Цайруулах серум </a> </li>
+                    <li><a href="../../pages2/aris_del/aris3.html"> Нүхжилтийн эсрэг тос</a></li>
+                    <li><a href="../../pages2/aris_del/aris4.html" > Нүхжилтийн эсрэг серум</a></li>
+                    <li> <a href="../../pages2/aris_del/aris5.html">Нүхжилтийн эсрэг тонер</li>
                 </ul>
               </li>
         
@@ -79,10 +81,10 @@
                 </div>
                 <ul class="sub-list">
                   <li><a href="../../pages2/nuur_budag_del/longwear+gel.html">Longwear Foundation + Gel Primer</a></li>
-                  <li>Cushion + Refill</li>
-                  <li>Cushion + Refill + Whitening Primer</li>
-                  <li>Cushion + Refill + Gel Primer</li>
-                  <li>Whitening Primer + Foundation</li>
+                  <li><a href="../../pages2/nuur_budag_del/makeup1.html">Cushion + Refill</a></li>
+                  <li><a href="../../pages/bagts/">Cushion + Refill + Whitening Primer</a></li>
+                  <li><a href="../../pages/bagts/">Cushion + Refill + Gel Primer</a></li>
+                  <li><a href="../../pages/bagts/">Whitening Primer + Foundation</a></li>
                 </ul>
               </li>
         </ul>
@@ -217,7 +219,9 @@
     item.classList.toggle('open');
   });
 });
-
+function resetSearch() {
+    document.querySelector('.search-input').value = ''; // Хайлт хоослох
+  }
       </script>
 
  <!-- Footer хэсэг -->

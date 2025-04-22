@@ -295,3 +295,48 @@ a:vlink {
 a:active {
     color: black;
 }
+body {
+    background-color: #F2F9FC;
+    color: #444;
+}
+
+.top-bar {
+    background-color: #A7D3F2;
+    color: #fff;
+    font-weight: bold;
+}
+
+nav {
+    background-color: #D6ECF3;
+    border-bottom: 1px solid #B0D4E3;
+}
+
+.menu li a {
+    color: #4682B4;
+}
+
+.menu li a:hover {
+    color: #244D70;
+}
+
+.sidebar {
+    background-color: #B0D4E3;
+}
+
+.product-card p {
+    color: #4682B4;
+    font-weight: bold;
+}
+
+footer {
+    background-color: #4682B4;
+    color: white;
+}
+
+.footer-section ul li a:hover {
+    color: #A7D3F2;
+}
+.product-card {
+    background-color: #D6ECF3;
+    border: 1px solid #A7D3F2;
+}
