@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="mn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тохиргоо - Admin Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Segoe+UI&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/settings.css">
+</head>
+
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <h2>Admin</h2>
+            <button id="mobile-toggle" class="mobile-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+        <ul>
+            <li><a href="./dashboard.html"><span class="icon">📊</span>Хяналтын самбар</a></li>
+            <li><a href="./index.html"><span class="icon">📦</span>Бүтээгдэхүүн</a></li>
+            <li><a href="./zahialga.html"><span class="icon">🛒</span>Захиалгууд</a></li>
+            <li><a href="./uilchluulegch.html"><span class="icon">👥</span>Хэрэглэгчид</a></li>
+            <li><a href="./hudaldaachid.html"><span class="icon">👨‍💼</span>Манай баг</a></li>
+            <li><a href="./settings.html" class="active"><span class="icon">⚙️</span>Тохиргоо</a></li>
+        </ul>
+        <div class="sidebar-footer">
+            <p>© 2025 E-Commerce</p>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Header -->
+        <div class="header">
+            <div class="header-left">
+                <h1>Тохиргоо</h1>
+            </div>
+            <div class="user">
+                <div class="notifications">
+                    <button class="icon-button" id="notifyBtn">🔔</button>
+                    <span class="badge">3</span>
+                    <div class="dropdown-menu" id="notifyDropdown">
+                        <div class="notification-item">
+                            <p>Шинэ захиалга хүлээн авлаа</p>
+                            <small>2 минутын өмнө</small>
+                        </div>
+                        <div class="notification-item">
+                            <p>Бүтээгдэхүүний үлдэгдэл бага байна</p>
+                            <small>1 цагийн өмнө</small>
+                        </div>
+                        <div class="notification-item">
+                            <p>Системийн шинэчлэлт</p>
+                            <small>Өчигдөр</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="user-profile">
+                    <span>Админ</span>
+                    <img src="/project/images/duk.jpg" alt="User" />
+                    <div class="dropdown-menu" id="profileDropdown">
+                        <a href="./settings.html">Тохиргоо</a>
+                        <a href="#">Гарах</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Settings content -->
+        <div class="settings-container">
+            <div class="settings-sidebar">
+                <ul class="settings-nav">
+                    <li><a href="#account" class="active">Хэрэглэгчийн тохиргоо</a></li>
+                    <li><a href="#site">Сайтын тохиргоо</a></li>
+                    <li><a href="#notifications">Мэдэгдлийн тохиргоо</a></li>
+                    <li><a href="#payments">Төлбөрийн тохиргоо</a></li>
+                    <li><a href="#shipping">Хүргэлтийн тохиргоо</a></li>
+                    <li><a href="#taxes">Татварын тохиргоо</a></li>
+                    <li><a href="#security">Аюулгүй байдал</a></li>
+                    <li><a href="#api">API тохиргоо</a></li>
+                    <li><a href="#backup">Бэкап & Дата</a></li>
+                </ul>
+            </div>
+
+            <div class="settings-content">
+                <!-- Account Settings -->
+                <div id="account" class="settings-section active">
+                    <div class="settings-header">
+                        <h2>Хэрэглэгчийн тохиргоо</h2>
+                        <p>Хэрэглэгчийн бүртгэл болон хувийн мэдээллийн тохиргоо</p>
+                    </div>
+
+                    <div class="settings-form">
+                        <div class="account-profile">
+                            <div class="profile-image">
+                                <img src="images/admin1.jpg" alt="Admin">
+                                <button class="change-photo-button">Зураг солих</button>
+                            </div>
+                            <div class="profile-info">
+                                <h3>Админ</h3>
+                                <p>admin@example.com</p>
+                                <p>Хамгийн сүүлд нэвтэрсэн: 2025-04-14 11:30:15</p>
+                            </div>
+                        </div>
+
+                        <form id="accountForm">
+                            <div class="form-section">
+                                <h3>Хувийн мэдээлэл</h3>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="firstName">Нэр</label>
+                                        <input type="text" id="firstName" value="Админ">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="lastName">Овог</label>
+                                        <input type="text" id="lastName" value="Админ">
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="email">И-мэйл</label>
+                                        <input type="email" id="email" value="admin@example.com">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="phone">Утасны дугаар</label>
+                                        <input type="text" id="phone" value="9911-0000">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-section">
+                                <h3>Нууц үг солих</h3>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="currentPassword">Одоогийн нууц үг</label>
+                                        <input type="password" id="currentPassword">
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="newPassword">Шинэ нууц үг</label>
+                                        <input type="password" id="newPassword">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="confirmPassword">Шинэ нууц үг баталгаажуулах</label>
+                                        <input type="password" id="confirmPassword">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-section">
+                                <h3>Хоёр үе шаттай баталгаажуулалт</h3>
+                                <div class="form-row">
+                                    <div class="form-group toggle-group">
+                                        <label class="toggle-switch">
+                                            <input type="checkbox" id="twoFactorAuth">
+                                            <span class="toggle-slider"></span>
+                                        </label>
+                                        <div class="toggle-label">
+                                            <span>Хоёр үе шаттай баталгаажуулалт</span>
+                                            <p class="toggle-description">Системд нэвтрэхэд нэмэлт баталгаажуулалт
+                                                шаардана</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-actions">
+                                <button type="button" class="cancel-button">Цуцлах</button>
+                                <button type="submit" class="save-button">Хадгалах</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Site Settings -->
+                <div id="site" class="settings-section">
+                    <div class="settings-header">
+                        <h2>Сайтын тохиргоо</h2>
+                        <p>Сайтын ерөнхий тохиргоо болон харагдах байдал</p>
+                    </div>
+
+                    <div class="settings-form">
+                        <form id="siteSettingsForm">
+                            <div class="form-section">
+                                <h3>Ерөнхий мэдээлэл</h3>
+                                <div class="form-group">
+                                    <label for="siteName">Сайтын нэр</label>
+                                    <input type="text" id="siteName" value="E-Commerce Admin">
+                                </div>
+                                <div class="form-group">
+                                    <label for="siteDescription">Товч тайлбар</label>
+                                    <textarea id="siteDescription"
+                                        rows="3">Гоо сайхны бүтээгдэхүүний цахим худалдааны сайт.</textarea>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="siteLanguage">Хэл</label>
+                                        <select id="siteLanguage">
+                                            <option value="mn" selected>Монгол</option>
+                                            <option value="en">English</option>
+                                            <option value="ru">Русский</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="timezone">Цагийн бүс</label>
+                                        <select id="timezone">
+                                            <option value="UTC+8" selected>Улаанбаатар (UTC+8)</option>
+                                            <option value="UTC+0">London (UTC+0)</option>
+                                            <option value="UTC-5">New York (UTC-5)</option>
+                                            <option value="UTC+9">Tokyo (UTC+9)</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-section">
+                                <h3>Лого & Favicon</h3>
+                                <div class="logo-preview">
+                                    <div class="logo-item">
+                                        <img src="images/logo.png" alt="Logo">
+                                        <button type="button" class="upload-button">Лого солих</button>
+                                    </div>
+                                    <div class="logo-item">
+                                        <img src="images/favicon.png" alt="Favicon">
+                                        <button type="button" class="upload-button">Favicon солих</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-section">
+                                <h3>Гадаад үзэмж</h3>
+                                <div class="form-row">
+                                    <div class="form-group color-picker">
+                                        <label for="primaryColor">Үндсэн өнгө</label>
+                                        <input type="color" id="primaryColor" value="#4CAF50">
+                                    </div>
+                                    <div class="form-group color-picker">
+                                        <label for="secondaryColor">Туслах өнгө</label>
+                                        <input type="color" id="secondaryColor" value="#2196F3">
+                                    </div>
+                                </div>
+                                <div class="form-group toggle-group">
+                                    <label class="toggle-switch">
+                                        <input type="checkbox" id="darkMode">
+                                        <span class="toggle-slider"></span>
+                                    </label>
+                                    <div class="toggle-label">
+                                        <span>Харанхуй горим</span>
+                                        <p class="toggle-description">Хэрэглэгчид сайтыг харанхуй горимоор харах
+                                            боломжтой болгох</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-actions">
+                                <button type="button" class="cancel-button">Цуцлах</button>
+                                <button type="submit" class="save-button">Хадгалах</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Other settings sections would be coded similarly -->
+                <div id="notifications" class="settings-section">
+                    <div class="settings-header">
+                        <h2>Мэдэгдлийн тохиргоо</h2>
+                        <p>Систем дэх мэдэгдэл болон и-мэйл тохиргоо</p>
+                    </div>
+                    <div class="settings-form">
+                        <form id="notificationsForm">
+                            <div class="form-section">
+                                <h3>Систем дэх мэдэгдэл</h3>
+                                <div class="notification-options">
+                                    <div class="form-group toggle-group">
+                                        <label class="toggle-switch">
+                                            <input type="checkbox" id="newOrderNotification" checked>
+                                            <span class="toggle-slider"></span>
+                                        </label>
+                                        <div class="toggle-label">
+                                            <span>Шинэ захиалга</span>
+                                            <p class="toggle-description">Шинэ захиалга орж ирэхэд мэдэгдэл хүлээн авах
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="form-group toggle-group">
+                                        <label class="toggle-switch">
+                                            <input type="checkbox" id="inventoryNotification" checked>
+                                            <span class="toggle-slider"></span>
+                                        </label>
+                                        <div class="toggle-label">
+                                            <span>Агуулахын мэдэгдэл</span>
+                                            <p class="toggle-description">Бүтээгдэхүүний үлдэгдэл бага болоход мэдэгдэх
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="form-group toggle-group">
+                                        <label class="toggle-switch">
+                                            <input type="checkbox" id="userRegistrationNotification">
+                                            <span class="toggle-slider"></span>
+                                        </label>
+                                        <div class="toggle-label">
+                                            <span>Шинэ хэрэглэгч</span>
+                                            <p class="toggle-description">Шинэ хэрэглэгч бүртгүүлэхэд мэдэгдэх</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-section">
+                                <h3>И-мэйл мэдэгдэл</h3>
+                                <div class="notification-options">
+                                    <div class="form-group toggle-group">
+                                        <label class="toggle-switch">
+                                            <input type="checkbox" id="orderConfirmationEmail" checked>
+                                            <span class="toggle-slider"></span>
+                                        </label>
+                                        <div class="toggle-label">
+                                            <span>Захиалга баталгаажуулах</span>
+                                            <p class="toggle-description">Захиалга амжилттай үүсгэгдэхэд и-мэйл илгээх
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="form-group toggle-group">
+                                        <label class="toggle-switch">
+                                            <input type="checkbox" id="shippingUpdateEmail" checked>
+                                            <span class="toggle-slider"></span>
+                                        </label>
+                                        <div class="toggle-label">
+                                            <span>Хүргэлтийн мэдээлэл</span>
+                                            <p class="toggle-description">Хүргэлтийн төлөв өөрчлөгдөхөд и-мэйл илгээх
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="form-group toggle-group">
+                                        <label class="toggle-switch">
+                                            <input type="checkbox" id="marketingEmail">
+                                            <span class="toggle-slider"></span>
+                                        </label>
+                                        <div class="toggle-label">
+                                            <span>Маркетингийн и-мэйл</span>
+                                            <p class="toggle-description">Урамшуулал, хямдрал, шинэ бүтээгдэхүүний
+                                                талаар мэдээлэх</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-actions">
+                                <button type="button" class="cancel-button">Цуцлах</button>
+                                <button type="submit" class="save-button">Хадгалах</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/settings.js"></script>
+</body>
+
+</html>
