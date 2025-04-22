@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="mn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beute God</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header хэсэг -->
+    <header>
+        <div class="top-bar">
+            Үрчлээний эсрэг эсвэл нүхжилтийн эсрэг багц + зөвхөн тос худалдаж авбал 🎁 Төгс хамгаалалт НАРНЫ ТОС
+            БЭЛЭГЛЭНЭ!
+        </div>
+        <nav>
+            <img src="../../nemelt/logo.png" class="logo" alt="img">
+            <ul class="menu">
+                <li><a href="../pages/bugd/index.html">Бүгд</a></li>
+                <li><a href="../bagts/index.html">Багц</a></li>
+                <li><a href="../aris/index.html">Арьс арчилгаа</a></li>
+                <li><a href="../nuur budag/index.html">Нүүр будалт</a></li>
+                <li><a href="../hymdral/index.html">Хямдрал</a></li>
+            </ul>
+            <div class="nav-icons">
+                <a href="../haih/index.html" id="search-toggle">🔍</a>
+                <a href="../sags/index.html">🛒</a>
+                <a href="#">👤</a>
+            </div>
+        </nav>
+        <div class="search-bar-container" id="search-bar" style="display: none;">
+            <input type="text" placeholder="Бүтээгдэхүүн хайх...">
+            <button type="button" id="search-close">X</button>
+        </div>
+    </header>
+
+    <!-- Product Detail Section -->
+    <div class="product-detail">
+        <div class="left-column">
+            <img src="../nemelt/zurag10.jpg" alt="Longwear Foundation + Gel Primer" class="main-image">
+            <input type="text" id="edit-img" placeholder="Шинэ зураг URL" style="display:none; margin-top: 10px;">
+            <button onclick="editImage()">✏️ Зураг солих</button>
+
+            <div class="thumbnail-row">
+                <img src="../nemelt/zurag10.jpg" class="thumb">
+            </div>
+        </div>
+
+        <div class="right-column">
+            <h2 id="product-name">Longwear Foundation + Gel Primer</h2>
+            <input type="text" id="edit-name" placeholder="Шинэ нэр" style="display:none;">
+            <button onclick="editName()">✏️ Нэр засах</button>
+
+            <p class="discount" id="discount">Хэмнэлт: 20,000₮</p>
+            <p class="price" id="price">55,000₮ <del>75,000₮</del></p>
+            <input type="text" id="edit-price" placeholder="Шинэ үнэ" style="display:none;">
+            <button onclick="editPrice()">✏️ Үнэ засах</button>
+
+            <p class="description">
+                Арьсыг нарны UVA болон UVB туяанаас хамгаалж, маш сайн усны хамгаалалттай, удаан тогтцотой шингэний
+                тусламжтайгаар өгч, жигд, будалт хийгээгүй мэт, байгальд ээлтэй гоо үзэсгэлэн бүрдүүлдэг. Өндөр өө
+                даралттай учраас оройн гоёлын будалтад илүү тохирно.
+            </p>
+
+            <div class="options">
+                <p>Өнгө:</p>
+                <div class="colors">
+                    <span class="color active">M21</span>
+                    <span class="color">B21</span>
+                    <span class="color">B23</span>
+                </div>
+            </div>
+
+            <div class="quantity">
+                <button>-</button>
+                <span>1</span>
+                <button>+</button>
+            </div>
+
+            <div class="buttons">
+                <button class="cart">🛒 Сагслах</button>
+                <button class="order">ЗАХИАЛАХ</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h3>Beute God</h3>
+                <p>"Beute God" брэнд нь 2021 онд Монгол хүний арьсны онцлогт тохирсон ариун цэврийн бүтээгдэхүүнээ
+                    гаргаж, үйл ажиллагаагаа албан ёсоор эхлүүлсэн. Бид гоо сайхны бүтээгдэхүүний үйлдвэрлэлд дэлхийд
+                    хүлээн зөвшөөрөгдсөн ISO227/6:2007 болон GMP стандартыг хангасан Монгол брэнд билээ.</p>
+            </div>
+            <div class="footer-section links">
+                <h3>Туслах цэс</h3>
+                <ul>
+                    <li><a href="../tuhai/index.html">Бидний тухай</a></li>
+                    <li><a href="../holboo barih/index.html">Холбоо барих</a></li>
+                    <li><a href="../asuult/index.html">Түгээмэл асуулт</a></li>
+                    <li><a href="../niitlel/index.html">Нийтлэлүүд</a></li>
+                </ul>
+            </div>
+            <div class="footer-section products">
+                <h3>Бүтээгдэхүүн</h3>
+                <ul>
+                    <li><a href="../bugd/index.html">Бүх бүтээгдэхүүн</a></li>
+                    <li><a href="#">Онцлох бүтээгдэхүүн</a></li>
+                    <li><a href="#">Бестселлер</a></li>
+                    <li><a href="../hymdral/index.html">Хямдарсан бүтээгдэхүүн</a></li>
+                </ul>
+            </div>
+            <div class="footer-section contact">
+                <h3>Холбоо барих</h3>
+                <ul>
+                    <li>📞 77328888</li>
+                    <li>📧 eeehold@gmail.com</li>
+                    <li>📍 Улаанбаатар хот, ХУД, 3-р хороо, Сүмбэр товч 15 давхарт 1506 тоот.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 Онлайн худалдааны хөгжүүлэгч <strong>Z9CHIL</strong> платформ.</p>
+            <input type="text" id="edit-footer" placeholder="Footer текст"
+                style="display:none; width: 100%; margin-top: 5px;">
+            <button onclick="editFooter()">✏️ Tailbar засах</button>
+        </div>
+    </footer>
+
+    <!-- Editable Script -->
+    <script>
+        function editName() {
+            const input = document.getElementById('edit-name');
+            const title = document.getElementById('product-name');
+            if (input.style.display === 'none') {
+                input.style.display = 'block';
+            } else {
+                if (input.value.trim() !== '') {
+                    title.textContent = input.value;
+                }
+                input.style.display = 'none';
+            }
+        }
+
+        function editPrice() {
+            const input = document.getElementById('edit-price');
+            const price = document.getElementById('price');
+            if (input.style.display === 'none') {
+                input.style.display = 'block';
+            } else {
+                if (input.value.trim() !== '') {
+                    price.innerHTML = input.value;
+                }
+                input.style.display = 'none';
+            }
+        }
+
+        function editImage() {
+            const input = document.getElementById('edit-img');
+            const image = document.querySelector('.main-image');
+            if (input.style.display === 'none') {
+                input.style.display = 'block';
+            } else {
+                if (input.value.trim() !== '') {
+                    image.src = input.value;
+                }
+                input.style.display = 'none';
+            }
+        }
+
+        function editFooter() {
+            const input = document.getElementById('edit-footer');
+            const footerText = document.querySelector('.footer-bottom p');
+            if (input.style.display === 'none') {
+                input.style.display = 'block';
+            } else {
+                if (input.value.trim() !== '') {
+                    footerText.textContent = input.value;
+                }
+                input.style.display = 'none';
+            }
+        }
+    </script>
+
+</body>
+
+</html>

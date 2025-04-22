@@ -411,6 +411,8 @@ footer {
     height: 250px;
     margin-bottom: 10px;
     border-radius: 5px;
+    object-fit: cover;        /* зургийг дүүргэж, пропорцыг хадгалж, хасалт хийнэ */
+    object-position: center;
 }
 .carousel-item:hover img {
     opacity: 0.8;
