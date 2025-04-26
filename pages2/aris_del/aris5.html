@@ -61,6 +61,19 @@
             <button class="cart">🛒Сагслах</button>
             <button class="order">ЗАХИАЛАХ</button>
           </div>
+          <div class="faq-wrapper">
+            <div class="faq">
+                <div class="faq-item">
+                    <button class="faq-btn"><b>Бvтээгдэхvvний тайлбар </b><span class="arrow">-</span></button>
+                    <div class="faq-content">
+                        <p class="justified"> ОНЦЛОХ ОРЦ, НАЙРЛАГА: <p>
+                        <p class="justified"><b>Portulaca (Portulaca Oleracea) Extract </b> буюу арьсны супер хоол гэгдэх энэ ургамал нь омега-3 тосны хүчил, Е витамин, бета-каротин зэрэг тэжээллэг бодисоор баялаг. Коллагены үүсэлтийг түргэсгэж, арьсыг уян хатан, гэрэлтсэн болгоно. </p>
+                        <p class="justified"><b>Citrus reticulata (Tangerine) peel extract</b> буюу С витамин их хэмжээгээр агуулсан энэхүү жимсний ханд нь пигмент толбыг цайруулж, арьсны өнгийг жигд болгож, хөгшрөлийн шинж тэмдгийг багасгахад тусалдаг. </p>
+                        <p class="justified"><b>Saffron (Crocus sativus) flower extract</b> буюу үнэт ургамлын ханд нь арьсыг хамгаалах хүчтэй антиоксидантаар баялаг бөгөөд пигмент толбыг бүдэгрүүлж, шинэ толбо үүсэхээс сэргийлнэ.</p>
+                    </div>
+                  </div>
+            </div>
+            </div>
         </div>
       </div>
       <!-- Tustei buteegdehuun -->
@@ -201,6 +214,29 @@ minusBtn.addEventListener('click', () => {
     });
   
     window.addEventListener('resize', updateCarousel);
+    const faqItems = document.querySelectorAll('.faq-item');
+    
+    faqItems.forEach(item => {
+      const btn = item.querySelector('.faq-btn');
+      const arrow = btn.querySelector('.arrow');
+
+      btn.addEventListener('click', () => {
+        const isActive = item.classList.contains('active');
+
+        // асуултуудыг хаах
+        faqItems.forEach(otherItem => {
+          otherItem.classList.remove('active');
+          const otherArrow = otherItem.querySelector('.arrow');
+          if (otherArrow) otherArrow.textContent = '+';
+        });
+
+        // Хэрвээ энэ асуулт идэвхгүй байвал нээх
+        if (!isActive) {
+          item.classList.add('active');
+          arrow.textContent = '-';
+        }
+      });
+    });
   </script>
 </body>
 </html>
