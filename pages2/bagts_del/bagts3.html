@@ -32,18 +32,19 @@
 
     <div class="product-detail">
         <div class="left-column">
-          <img src="../../nemelt/aris1.jpg" alt="Цайруулах тос" class="main-image">
+          <img src="../../nemelt/zurag3.jpg" alt="Цайруулах багц" class="main-image">
           <div class="thumbnail-row">
-            <img src="../../nemelt/aris1.jpg" class="thumb">
+            <img src="../../nemelt/zurag3.jpg" class="thumb">
+            <img src="../../nemelt/zurag3-2.jpg" class="thumb">
            
           </div>
         </div>
       
         <div class="right-column">
-          <h2>Цайруулах тос</h2>
-          <p class="price">39,000₮</p>
+          <h2>ЧЦайруулах багц</h2>
+          <p class="price">78,000₮</p>
           <p class="description">
-            Олон төрлийн ургамлын ханд, амин дэм, эрдсээр баялаг найрлага нь арьсны эсийн түвшинд тэжээл өгч, арьсны эсийн нөхөн төлжлийг хурдасгаж, нар, салхи, батганаас үүссэн сэвх, нөсөө толбыг бүдгэрүүлж, арьсыг цайруулна.
+            Арьсны гүнд тэжээл өгч, нар, салхи, батганы эсрэг тулгарах сэвхийг багасгаж өнгийг сэргээж нөхөн төлж, хөгшрөлтийн шинж тэмдгийг бүдгэрүүлдэг. Portulaca, Tangerine Peel, Saffron зэрэг антисидонт орц найрлага нь коллаген болон эсийг хурдан нөхөн төлж, арьсны тэгш өнгийн бүтэц бий болгоход тусалдаг.            
           </p>
           
       
@@ -79,22 +80,26 @@
       <button class="carousel-btn prev">&#10094;</button>
       
       <div class="carousel-track">
-        <div class="carousel-item"> <a href="aris2.html">
-          <img src="../../nemelt/aris2.jpg" alt="Цайруулах серум"></a>
-          <p><strong>Цайруулах серум</strong><br>39,000₮</p>
+        <div class="carousel-item"> <a href="bagts2.html">
+          <img src="../../nemelt/zurag2.jpg" alt="Гүн цэвэрлэгээний багц"></a>
+          <p><strong>Чийгшүүлэх багц</strong><br>33,500₮</p>
         </div>
-        <div class="carousel-item"><a href="aris3.html">
-          <img src="../../nemelt/aris3.jpg" alt="Нүхжилтийн эсрэг тос"></a>
-          <p><strong>Нүхжилтийн эсрэг тос</strong><br>44,000₮ </p>
+        <div class="carousel-item"><a href="bagts3.html">
+          <img src="../../nemelt/zurag3.jpg" alt="Чийгшүүлэх багц"></a>
+          <p><strong>Цайруулах багц</strong><br>33,500₮ </p>
         </div>
-        <div class="carousel-item"><a href="aris4.html">
-          <img src="../../nemelt/aris4.jpg" alt="Нүхжилтийн эсрэг серум"></a>
-          <p><strong>Нүхжилтийн эсрэг серум</strong><br>55,000₮ </p>
+        <div class="carousel-item"><a href="bagts4.html">
+          <img src="../../nemelt/zurag4.jpg" alt="Цайруулах багц"></a>
+          <p><strong>Нүхжилтийн эсрэг багц</strong><br>78,000₮</p>
         </div>
-        <div class="carousel-item"><a href="aris5.html">
-          <img src="../../nemelt/aris5.jpg" alt="Нүхжилтийн эсрэг тонер"></a>
-          <p><strong>Нүхжилтийн эсрэг тонер</strong><br>26,400₮ </p>
+        <div class="carousel-item"><a href="bagts5.html">
+          <img src="../../nemelt/zurag5.jpg" alt="Нүхжилтийн эсрэг багц"></a>
+          <p><strong>Нүхжилтийн эсрэг тонер</strong><br>117,000₮ </p>
         </div>
+        <div class="carousel-item"><a href="bagts6.html">
+            <img src="../../nemelt/zurag5.jpg" alt="Үрчлээний эсрэг багц"></a>
+            <p><strong>Нүхжилтийн эсрэг тонер</strong><br>172,000₮ </p>
+          </div>
       </div>
   
       <button class="carousel-btn next">&#10095;</button>
@@ -165,75 +170,75 @@
     </div>
 </footer>
 <script>
-  // Элементийг олоход туслах хувьсагчид
+    // Элементийг олоход туслах хувьсагчид
 const minusBtn = document.querySelector('.qty-minus');
 const plusBtn = document.querySelector('.qty-plus');
 const qtyInput = document.querySelector('.qty-controls input');
 
 // Нэмэх товчлуурын үйлдэл
 plusBtn.addEventListener('click', () => {
-  let currentValue = parseInt(qtyInput.value);
-  qtyInput.value = currentValue + 1;
+    let currentValue = parseInt(qtyInput.value);
+    qtyInput.value = currentValue + 1;
 });
 
 // Хасах товчлуурын үйлдэл
 minusBtn.addEventListener('click', () => {
-  let currentValue = parseInt(qtyInput.value);
-  if (currentValue > 1) { // Хамгийн багадаа 1 байхаар хязгаар тавих
-      qtyInput.value = currentValue - 1;
-  }
+    let currentValue = parseInt(qtyInput.value);
+    if (currentValue > 1) { // Хамгийн багадаа 1 байхаар хязгаар тавих
+        qtyInput.value = currentValue - 1;
+    }
 });
-  const track = document.querySelector('.carousel-track');
-  const items = document.querySelectorAll('.carousel-item');
-  const prevBtn = document.querySelector('.carousel-btn.prev');
-  const nextBtn = document.querySelector('.carousel-btn.next');
-
-  let index = 0;
-
-  function updateCarousel() {
-    const itemWidth = items[0].offsetWidth;
-    track.style.transform = `translateX(-${index * itemWidth}px)`;
-  }
-
-  nextBtn.addEventListener('click', () => {
-    if (index < items.length - 1) {
-      index++;
-      updateCarousel();
-    }
-  });
-
-  prevBtn.addEventListener('click', () => {
-    if (index > 0) {
-      index--;
-      updateCarousel();
-    }
-  });
-
-  window.addEventListener('resize', updateCarousel);
-  const faqItems = document.querySelectorAll('.faq-item');
+    const track = document.querySelector('.carousel-track');
+    const items = document.querySelectorAll('.carousel-item');
+    const prevBtn = document.querySelector('.carousel-btn.prev');
+    const nextBtn = document.querySelector('.carousel-btn.next');
   
-  faqItems.forEach(item => {
-    const btn = item.querySelector('.faq-btn');
-    const arrow = btn.querySelector('.arrow');
-
-    btn.addEventListener('click', () => {
-      const isActive = item.classList.contains('active');
-
-      // асуултуудыг хаах
-      faqItems.forEach(otherItem => {
-        otherItem.classList.remove('active');
-        const otherArrow = otherItem.querySelector('.arrow');
-        if (otherArrow) otherArrow.textContent = '+';
-      });
-
-      // Хэрвээ энэ асуулт идэвхгүй байвал нээх
-      if (!isActive) {
-        item.classList.add('active');
-        arrow.textContent = '-';
+    let index = 0;
+  
+    function updateCarousel() {
+      const itemWidth = items[0].offsetWidth;
+      track.style.transform = `translateX(-${index * itemWidth}px)`;
+    }
+  
+    nextBtn.addEventListener('click', () => {
+      if (index < items.length - 1) {
+        index++;
+        updateCarousel();
       }
     });
-  });
-</script>
+  
+    prevBtn.addEventListener('click', () => {
+      if (index > 0) {
+        index--;
+        updateCarousel();
+      }
+    });
+  
+    window.addEventListener('resize', updateCarousel);
+    const faqItems = document.querySelectorAll('.faq-item');
+    
+    faqItems.forEach(item => {
+      const btn = item.querySelector('.faq-btn');
+      const arrow = btn.querySelector('.arrow');
+
+      btn.addEventListener('click', () => {
+        const isActive = item.classList.contains('active');
+
+        // асуултуудыг хаах
+        faqItems.forEach(otherItem => {
+          otherItem.classList.remove('active');
+          const otherArrow = otherItem.querySelector('.arrow');
+          if (otherArrow) otherArrow.textContent = '+';
+        });
+
+        // Хэрвээ энэ асуулт идэвхгүй байвал нээх
+        if (!isActive) {
+          item.classList.add('active');
+          arrow.textContent = '-';
+        }
+      });
+    });
+  </script>
 </body>
 </html>
 

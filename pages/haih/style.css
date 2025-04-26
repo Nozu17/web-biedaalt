@@ -402,4 +402,85 @@ body {
     transform: rotate(90deg);
     transition: transform 0.2s;
   }
-  
+  body {
+    background-color: #F2F9FC;
+    color: #444;
+}
+
+.top-bar {
+    background-color: #A7D3F2;
+    color: #fff;
+    font-weight: bold;
+}
+
+nav {
+    background-color: #D6ECF3;
+    border-bottom: 1px solid #B0D4E3;
+}
+
+.menu li a {
+    color: #4682B4;
+}
+
+.menu li a:hover {
+    color: #244D70;
+}
+
+.sidebar {
+    background-color: #B0D4E3;
+}
+
+.product-card p {
+    color: #4682B4;
+    font-weight: bold;
+}
+
+footer {
+    background-color: #4682B4;
+    color: white;
+}
+
+.footer-section ul li a:hover {
+    color: #A7D3F2;
+}
+.search-list li a,
+.search-list li a span,
+.expand-title,
+.expand-title span,
+.sub-list li {
+    font-family: Arial, sans-serif !important;
+    font-size: 18px;
+    font-weight: normal !important;
+    color: #244D70 !important; /* гүн цэнхэр өнгө */
+    text-decoration: none !important;
+}
+
+.search-list li a:hover,
+.expand-title:hover {
+    color: #1a3b59 !important; /* hover үед илүү бараан цэнхэр */
+}
+.subcategory, .subcategory ul {
+    display: none;
+    list-style: none;
+    margin: 0;
+    padding: 0 0 0 20px;
+  }
+  .category.active .subcategory {
+    display: block;
+  }
+  .category-toggle {
+    background: #eee;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    font-weight: bold;
+  }
+  .search-buttons {
+    margin-top: 20px;
+  }
+  .product-card {
+    background-color: #D6ECF3;
+    border: 1px solid #A7D3F2;
+}
