@@ -603,9 +603,10 @@ body {
 }
 
 .top-bar {
-  background-color: #A7D3F2;
-  color: #fff;
-  font-weight: bold;
+  background-color: #f5f5f5;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 14px;
 }
 
 nav {
@@ -646,4 +647,12 @@ footer {
 .product-card {
   background-color: #D6ECF3;
   border: 1px solid #A7D3F2;
+}
+.my-link {
+  color: black; /* Энгийн үед хар */
+  text-decoration: none; /* Доогуурх зураас байхгүй */
+}
+.my-link1 {
+  color: white; /* Энгийн үед хар */
+  text-decoration: none; /* Доогуурх зураас байхгүй */
 }
