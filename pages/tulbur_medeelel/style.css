@@ -271,7 +271,91 @@ footer {
         align-items: center;
     }
 }
-.continue-btn {
+.content {
+    flex-grow: 1; /* Үлдсэн зайг эзлэх */
+    padding: 30px;
+}
+.content h1 {
+    margin-top: 0;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15px;
+    margin-bottom: 25px;
+}
+.sidebar .menu {
+display: flex;
+flex-direction: column;
+margin-top: auto; /* энэ нь menu-г доош нь шахаж байрлуулна */
+}
+
+ /* Form styling (өмнөх кодтой адил эсвэл сайжруулсан) */
+.form-group {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+    gap: 20px;
+    margin-bottom: 25px;
+}
+.form-field label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #495057;
+}
+.form-field input[type="text"],
+.form-field input[type="email"],
+.form-field select,
+.form-field textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    box-sizing: border-box; /* Padding, border-г өргөнд оруулах */
+}
+.form-field textarea {
+    min-height: 80px;
+    resize: vertical;
+}
+.save-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.2s ease;
+}
+.save-btn:hover {
+    background-color: #0056b3;
+}.payment-method {
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    max-width: 400px;
+    margin-top: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  }
+  
+  .payment-logo {
+    width: 40px;
+    height: 40px;
+    margin-right: 12px;
+  }
+  .payment-method a {
+    display: flex;
+    align-items: center;
+    text-decoration: none; /* Доогуур зураасыг арилгана */
+    color: inherit;         /* Өөрийн өнгөөр хэвээр үлдээнэ */
+}
+  
+  .payment-name {
+    font-size: 16px;
+    font-weight: 500;
+    color: #333333;
+  }
+  .continue-btn {
     color: white;              /* Үсгийн өнгө */
     padding: 12px 24px;         /* Дотоод зай */
     border: none;               /* Хүрээ байхгүй */
