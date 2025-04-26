@@ -30,9 +30,7 @@
     </nav>
 </header>
 
-<!-- 🛒 Cart + 💳 Payment Section -->
 <div class="cart-payment-container">
-    <!-- 💳 Payment Info -->
     <div class="payment-info">
         <h2>Төлбөрийн мэдээлэл</h2>
         <div class="payment-summary">
@@ -53,30 +51,62 @@
             <input type="text" placeholder="Купон код">
             <button class="check-btn">Шалгах</button>
         </div>
-        <button class="continue-btn"><a href="../tulbur_medeelel/index.html">Үргэлжлүүлэх</a></button>
+        <h3>Төлбөрийн хэрэгсэл</h3>
+
+            <div class="payment-method"><a href="../tulbur/index.html">
+              <img src="../../nemelt/qpay.jpeg" alt="QPay" class="payment-logo">
+              <span class="payment-name">QPay</span></a>
+            </div>
+        <button class="continue-btn"><a href="../tulbur/index.html">Үргэлжлүүлэх</a></button>
         <p class="note">⚠️ Хүргэлтийн бүсээс хамаарч хүргэлтийн төлбөрт өөрчлөлт орохыг анхаараарай.</p>
     </div>
 
     <!-- 🛍️ Cart Section -->
-    <div class="cart-sidebar">
-        <div class="cart-header">
-            <h2>Таны сагс</h2>
-            <button class="clear-cart">🗑️ Хоослох</button>
-        </div>
-        <div class="cart-content">
-            <div class="cart-item">
-                <img src="../../nemelt/zurag2.jpg" alt="Бүтээгдэхүүн">
-                <div class="item-details">
-                    <p>Нүхжилтийн эсрэг багц</p>
-                    <span>117,000₮</span>
+    <div class="content">
+        <h2>Захиалагчийн мэдээлэл</h2>
+        <form>
+            <div class="form-group">
+                <div class="form-field">
+                    <label>Овог *</label>
+                    <input type="text" value="Б." placeholder="Овгоо оруулна уу">
                 </div>
-                <div class="qty-controls">
-                    <button class="qty-minus">-</button>
-                    <input type="text" value="1" readonly>
-                    <button class="qty-plus">+</button>
+                <div class="form-field">
+                    <label>Нэр *</label>
+                    <input type="text" value="Номинзул" placeholder="Нэрээ оруулна уу">
+                </div>
+                <div class="form-field">
+                    <label>Утасны дугаар *</label>
+                    <input type="tel" placeholder="Утасны дугаараа оруулна уу">
+                </div>
+                <div class="form-field">
+                    <label>Имэйл хаяг</label>
+                    <input type="email" placeholder="Имэйл хаягаа оруулна уу">
                 </div>
             </div>
-        </div>
+        </form>
+
+        <h2>Хүргэлтийн мэдээлэл</h2>
+        <form>
+            <div class="form-group">
+                <div class="form-field">
+                    <label>Хот/Аймаг *</label>
+                    <select>
+                        <option value="">Сонгох</option>
+                        <option>Улаанбаатар</option>
+                        <option>Дархан</option>
+                        <option>Эрдэнэт</option>
+                        </select>
+                </div>
+                <div class="form-field">
+                    <label>Хүргэлтийн хаяг *</label>
+                    <input type="text" placeholder="Дүүрэг, хороо, байр, тоот">
+                </div>
+                <div class="form-field full-width"> <label>Нэмэлт мэдээлэл</label>
+                    <textarea rows="3" placeholder="Орцны код, лавлах зүйлс гэх мэт"></textarea>
+                </div>
+            </div>
+        </form>
+                
     </div>
 </div>
 
