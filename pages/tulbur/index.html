@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beute God</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Header хэсэг -->
+<header>
+    <div class="top-bar">
+        Үрчлээний эсрэг эсвэл нүхжилтийн эсрэг багц + зөвхөн тос худалдаж авбал 🎁 Төгс хамгаалалт НАРНЫ ТОС БЭЛЭГЛЭНЭ!
+    </div>
+    <nav>
+        <a href="../../index.html"><img src="../../nemelt/logo.png" class="logo" alt="logo"></a>
+        <ul class="menu">
+            <li><a href="../bugd/index.html">Бүгд</a></li>
+            <li><a href="../bagts/index.html">Багц</a></li>
+            <li><a href="../aris/index.html">Арьс арчилгаа</a></li>
+            <li><a href="../nuur budag/index.html">Нүүр будалт</a></li>
+            <li><a href="../hymdral/index.html">Хямдрал</a></li>
+        </ul>
+        <div class="nav-icons">
+            <a href="../haih/index.html">🔍</a>
+            <a href="../sags/index.html">🛒</a>
+            <a href="../haih/index.html">👤</a>
+        </div>
+    </nav>
+</header>
+
+<!-- 🛒 Cart + 💳 Payment Section -->
+<div class="cart-payment-container">
+    <!-- 💳 Payment Info -->
+    <div class="payment-info">
+        <h2>Төлбөрийн мэдээлэл</h2>
+        <div class="payment-summary">
+            <div class="summary-row">
+                <span>Бүтээгдэхүүний дүн:</span>
+                <strong id="product-price">117,000₮</strong>
+            </div>
+            <div class="summary-row">
+                <span>Хүргэлтийн дүн:</span>
+                <strong>0₮</strong>
+            </div>
+            <div class="summary-row total">
+                <span>Нийт дүн:</span>
+                <strong id="total-price">117,000₮</strong>
+            </div>
+        </div>
+        <div class="coupon-section">
+            <input type="text" placeholder="Купон код">
+            <button class="check-btn">Шалгах</button>
+        </div>
+        <button class="continue-btn" onclick="document.location='http://127.0.0.1:3000/asuult/zahialagchiin%20medeelel.html'">Үргэлжлүүлэх</button>
+        <p class="note">⚠️ Хүргэлтийн бүсээс хамаарч хүргэлтийн төлбөрт өөрчлөлт орохыг анхаараарай.</p>
+    </div>
+
+    <!-- 🛍️ Cart Section -->
+    <div class="content">
+        <h2>Захиалагчийн мэдээлэл</h2>
+        <form>
+            <div class="form-group">
+                <div class="form-field">
+                    <label>Овог *</label>
+                    <input type="text" value="Б." placeholder="Овгоо оруулна уу">
+                </div>
+                <div class="form-field">
+                    <label>Нэр *</label>
+                    <input type="text" value="Номинзул" placeholder="Нэрээ оруулна уу">
+                </div>
+                <div class="form-field">
+                    <label>Утасны дугаар *</label>
+                    <input type="tel" placeholder="Утасны дугаараа оруулна уу">
+                </div>
+                <div class="form-field">
+                    <label>Имэйл хаяг</label>
+                    <input type="email" placeholder="Имэйл хаягаа оруулна уу">
+                </div>
+            </div>
+        </form>
+
+        <h2>Хүргэлтийн мэдээлэл</h2>
+        <form>
+            <div class="form-group">
+                <div class="form-field">
+                    <label>Хот/Аймаг *</label>
+                    <select>
+                        <option value="">Сонгох</option>
+                        <option>Улаанбаатар</option>
+                        <option>Дархан</option>
+                        <option>Эрдэнэт</option>
+                        </select>
+                </div>
+                <div class="form-field">
+                    <label>Хүргэлтийн хаяг *</label>
+                    <input type="text" placeholder="Дүүрэг, хороо, байр, тоот">
+                </div>
+                <div class="form-field full-width"> <label>Нэмэлт мэдээлэл</label>
+                    <textarea rows="3" placeholder="Орцны код, лавлах зүйлс гэх мэт"></textarea>
+                </div>
+            </div>
+        </form>
+        <h2>Төлбөрийн хэрэгсэл </h2>
+
+    </div>
+</div>
+
+<!-- Footer хэсэг -->
+<footer>
+    <div class="footer-content">
+        <div class="footer-section about">
+            <h3>Beute God</h3>
+            <p>"Beute God" брэнд нь 2021 онд Монгол хүний арьсны онцлогт тохирсон ариун цэврийн бүтээгдэхүүнээ гаргаж, үйл ажиллагаагаа эхлүүлсэн.</p>
+        </div>
+        <div class="footer-section links">
+            <h3>Туслах цэс</h3>
+            <ul>
+                <li><a href="../tuhai/index.html">Бидний тухай</a></li>
+                <li><a href="../holboo barih/index.html">Холбоо барих</a></li>
+                <li><a href="../asuult/index.html">Түгээмэл асуулт</a></li>
+                <li><a href="../niitlel/index.html">Нийтлэлүүд</a></li>
+            </ul>
+        </div>
+        <div class="footer-section products">
+            <h3>Бүтээгдэхүүн</h3>
+            <ul>
+                <li><a href="../bugd/index.html">Бүх бүтээгдэхүүн</a></li>
+                <li>Онцлох бүтээгдэхүүн</li>
+                <li>Бестселлер</li>
+                <li><a href="../hymdral/index.html">Хямдарсан бүтээгдэхүүн</a></li>
+            </ul>
+        </div>
+        <div class="footer-section contact">
+            <h3>Холбоо барих</h3>
+            <ul>
+                <li>📞 77328888</li>
+                <li>📧 eeehold@gmail.com</li>
+                <li>📍 Улаанбаатар хот, ХУД, 3-р хороо, Сүмбэр товч 15 давхарт 1506 тоот.</li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>© 2025 Онлайн худалдааны хөгжүүлэгч <strong>Z9CHIL</strong> платформ.</p>
+    </div>
+</footer>
+
+<!-- JavaScript -->
+<script>
+    // Elements
+const minusBtn = document.querySelector('.qty-minus');
+const plusBtn = document.querySelector('.qty-plus');
+const qtyInput = document.querySelector('.qty-controls input');
+const productPrice = document.getElementById('product-price');
+const totalPrice = document.getElementById('total-price');
+
+const pricePerItem = 117000; // Product unit price
+
+// Update prices
+function updatePrice() {
+    const qty = parseInt(qtyInput.value);
+    const total = pricePerItem * qty;
+    productPrice.textContent = total.toLocaleString() + "₮";
+    totalPrice.textContent = total.toLocaleString() + "₮";
+}
+
+// Button actions
+plusBtn.addEventListener('click', () => {
+    let qty = parseInt(qtyInput.value);
+    qtyInput.value = qty + 1;
+    updatePrice();
+});
+
+minusBtn.addEventListener('click', () => {
+    let qty = parseInt(qtyInput.value);
+    if (qty > 1) {
+        qtyInput.value = qty - 1;
+        updatePrice();
+    }
+});
+
+// Initialize
+updatePrice();
+
+</script>
+</body>
+</html>
